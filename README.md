@@ -99,10 +99,36 @@ T+0057s available= 23.1GiB | Loading safetensors checkpoint shards: 0/206      -
 ```
 
 Memory then holds flat through weight loading, which indicates the weights are filling an
-already reserved pool. This has **not** yet been separated from vLLM's own
-`--gpu-memory-utilization 0.85` reservation (0.85 x 121 GiB is about 103 GiB, the same order
-of magnitude). A relaunch at `GPU_UTIL=0.5` would settle which it is. Reported here as an
-observation, not a diagnosis.
+already reserved pool.
+
+**Settled by experiment: this is the reserved pool, not kernel workspace.** Re-running the
+identical configuration with only `--gpu-memory-utilization` changed:
+
+| | 0.85 | 0.70 |
+|---|---|---|
+| before init | 111.7 GiB | 111.7 GiB |
+| at first weight shard | 23.1 GiB | 47.4 GiB |
+| consumed before any weight | **88.6 GiB** | **64.3 GiB** |
+| weights loaded | 64.06 GiB | 64.06 GiB |
+| GPU KV cache | **2,228,932 tok** | **1,001,815 tok** |
+| concurrency @ 262,144 | 8.50x | 3.82x |
+
+Lowering utilization by 0.15 removed 24.3 GiB from the pre-weight allocation, while weight
+loading was byte-identical at 64.06 GiB in both runs. The reserved memory is not consumed,
+it becomes the KV pool: 24.3 GiB of pool difference against 1,227,117 tokens of KV
+difference is about 21 KB per token, a sane bf16 figure for this architecture.
+
+So the order of operations is: reserve the pool, load weights into it, and whatever remains
+becomes KV cache. Flat memory during weight loading is the signature.
+
+One consequence worth knowing: `weight_utils.py` reads `psutil.virtual_memory().available`
+**after** the pool is reserved, so it measures a system vLLM itself just depleted. That is
+why it can conclude the checkpoint exceeds 90% of available RAM and disable auto-prefetch on
+exactly the large models where prefetch would help most.
+
+Practical rule on a 121 GB unified node: pick utilization by how much KV you need. Trying to
+shrink the initial allocation is aiming at the wrong thing, because the allocation is the
+point.
 
 ### The MoE backend is selectable, but there is no usable alternative on GB10
 
