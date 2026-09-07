@@ -1,0 +1,973 @@
+T+0000s available=115.0GiB | 
+T+0002s available=114.9GiB | 
+T+0004s available=114.9GiB | 
+T+0006s available=114.8GiB | 
+T+0008s available=114.4GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0010s available=114.3GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0012s available=114.2GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0014s available=114.1GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0016s available=113.7GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0018s available=113.7GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0020s available=113.7GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0022s available=113.5GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0024s available=113.1GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0026s available=113.9GiB | (APIServer pid=1) INFO 09-07 21:35:07 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+T+0028s available=113.7GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0030s available=113.5GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0032s available=113.2GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0034s available=113.1GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0036s available=112.1GiB | (EngineCore pid=368) INFO 09-07 21:35:18 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=192.168.101.14, mq_connect
+T+0038s available=112.5GiB | (EngineCore pid=368) INFO 09-07 21:35:18 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=192.168.101.14, mq_connect
+T+0040s available=112.3GiB | (EngineCore pid=368) INFO 09-07 21:35:18 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=192.168.101.14, mq_connect
+T+0042s available=112.0GiB | (Worker pid=440) INFO 09-07 21:35:24 [parallel_state.py:1638] world_size=2 rank=0 local_rank=0 distributed_init_method=tcp://192.168.101.14:25400 backend=nccl
+T+0045s available=111.4GiB | (Worker pid=440) INFO 09-07 21:35:26 [pynccl.py:113] vLLM is using nccl==2.30.7
+T+0047s available=78.4GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:35:28 [flash_attn.py:911] Using FlashAttention version 2
+T+0049s available=27.6GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:35:28 [flash_attn.py:911] Using FlashAttention version 2
+T+0051s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   0% Completed | 0/131 [00:00<?, ?it/s]
+T+0053s available=22.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   1% Completed | 1/131 [00:01<03:55,  1.81s/it]
+T+0055s available=21.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   1% Completed | 1/131 [00:01<03:55,  1.81s/it]
+T+0057s available=21.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   1% Completed | 1/131 [00:01<03:55,  1.81s/it]
+T+0059s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   2% Completed | 2/131 [00:07<08:52,  4.13s/it]
+T+0061s available=22.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   2% Completed | 3/131 [00:11<08:15,  3.87s/it]
+T+0063s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   2% Completed | 3/131 [00:11<08:15,  3.87s/it]
+T+0065s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   2% Completed | 3/131 [00:11<08:15,  3.87s/it]
+T+0067s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   3% Completed | 4/131 [00:16<09:50,  4.65s/it]
+T+0069s available=22.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   3% Completed | 4/131 [00:16<09:50,  4.65s/it]
+T+0071s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   3% Completed | 4/131 [00:16<09:50,  4.65s/it]
+T+0073s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   3% Completed | 4/131 [00:16<09:50,  4.65s/it]
+T+0075s available=21.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   4% Completed | 5/131 [00:23<11:31,  5.49s/it]
+T+0077s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   4% Completed | 5/131 [00:23<11:31,  5.49s/it]
+T+0079s available=20.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   4% Completed | 5/131 [00:23<11:31,  5.49s/it]
+T+0081s available=19.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   4% Completed | 5/131 [00:23<11:31,  5.49s/it]
+T+0083s available=21.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 6/131 [00:33<14:25,  6.92s/it]
+T+0085s available=20.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 6/131 [00:33<14:25,  6.92s/it]
+T+0087s available=20.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 6/131 [00:33<14:25,  6.92s/it]
+T+0089s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 6/131 [00:33<14:25,  6.92s/it]
+T+0091s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 6/131 [00:33<14:25,  6.92s/it]
+T+0093s available=20.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 6/131 [00:33<14:25,  6.92s/it]
+T+0095s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 6/131 [00:33<14:25,  6.92s/it]
+T+0097s available=21.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 7/131 [00:46<18:10,  8.80s/it]
+T+0100s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 7/131 [00:46<18:10,  8.80s/it]
+T+0102s available=20.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 7/131 [00:46<18:10,  8.80s/it]
+T+0104s available=19.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 7/131 [00:46<18:10,  8.80s/it]
+T+0106s available=20.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 7/131 [00:46<18:10,  8.80s/it]
+T+0108s available=19.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   5% Completed | 7/131 [00:46<18:10,  8.80s/it]
+T+0110s available=21.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   6% Completed | 8/131 [00:59<20:54, 10.20s/it]
+T+0112s available=20.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   6% Completed | 8/131 [00:59<20:54, 10.20s/it]
+T+0114s available=20.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   6% Completed | 8/131 [00:59<20:54, 10.20s/it]
+T+0116s available=20.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   6% Completed | 8/131 [00:59<20:54, 10.20s/it]
+T+0118s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   6% Completed | 8/131 [00:59<20:54, 10.20s/it]
+T+0120s available=20.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   6% Completed | 8/131 [00:59<20:54, 10.20s/it]
+T+0122s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   7% Completed | 9/131 [01:12<22:33, 11.10s/it]
+T+0124s available=21.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   7% Completed | 9/131 [01:12<22:33, 11.10s/it]
+T+0126s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   7% Completed | 9/131 [01:12<22:33, 11.10s/it]
+T+0128s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   7% Completed | 9/131 [01:12<22:33, 11.10s/it]
+T+0130s available=19.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   7% Completed | 9/131 [01:12<22:33, 11.10s/it]
+T+0132s available=19.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   7% Completed | 9/131 [01:12<22:33, 11.10s/it]
+T+0134s available=19.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   7% Completed | 9/131 [01:12<22:33, 11.10s/it]
+T+0136s available=21.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 10/131 [01:25<23:34, 11.69s/it]
+T+0138s available=20.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 10/131 [01:25<23:34, 11.69s/it]
+T+0140s available=20.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 10/131 [01:25<23:34, 11.69s/it]
+T+0142s available=20.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 10/131 [01:25<23:34, 11.69s/it]
+T+0144s available=19.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 10/131 [01:25<23:34, 11.69s/it]
+T+0146s available=19.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 10/131 [01:25<23:34, 11.69s/it]
+T+0148s available=21.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 11/131 [01:38<24:21, 12.18s/it]
+T+0150s available=20.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 11/131 [01:38<24:21, 12.18s/it]
+T+0152s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 11/131 [01:38<24:21, 12.18s/it]
+T+0154s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 11/131 [01:38<24:21, 12.18s/it]
+T+0156s available=20.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 11/131 [01:38<24:21, 12.18s/it]
+T+0159s available=20.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   8% Completed | 11/131 [01:38<24:21, 12.18s/it]
+T+0161s available=19.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   9% Completed | 12/131 [01:51<24:16, 12.24s/it]
+T+0163s available=21.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   9% Completed | 12/131 [01:51<24:16, 12.24s/it]
+T+0165s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   9% Completed | 12/131 [01:51<24:16, 12.24s/it]
+T+0167s available=20.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   9% Completed | 12/131 [01:51<24:16, 12.24s/it]
+T+0169s available=20.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   9% Completed | 12/131 [01:51<24:16, 12.24s/it]
+T+0171s available=19.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   9% Completed | 12/131 [01:51<24:16, 12.24s/it]
+T+0173s available=19.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   9% Completed | 12/131 [01:51<24:16, 12.24s/it]
+T+0175s available=20.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  10% Completed | 13/131 [02:04<24:32, 12.48s/it]
+T+0177s available=20.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  10% Completed | 13/131 [02:04<24:32, 12.48s/it]
+T+0179s available=19.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  10% Completed | 13/131 [02:04<24:32, 12.48s/it]
+T+0181s available=19.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  10% Completed | 13/131 [02:04<24:32, 12.48s/it]
+T+0183s available=20.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  10% Completed | 13/131 [02:04<24:32, 12.48s/it]
+T+0185s available=21.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  11% Completed | 14/131 [02:14<22:47, 11.68s/it]
+T+0187s available=20.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  11% Completed | 14/131 [02:14<22:47, 11.68s/it]
+T+0189s available=20.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  11% Completed | 14/131 [02:14<22:47, 11.68s/it]
+T+0191s available=19.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  11% Completed | 14/131 [02:14<22:47, 11.68s/it]
+T+0193s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  11% Completed | 14/131 [02:14<22:47, 11.68s/it]
+T+0195s available=19.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  11% Completed | 14/131 [02:14<22:47, 11.68s/it]
+T+0197s available=21.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  11% Completed | 15/131 [02:26<22:57, 11.87s/it]
+T+0199s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  11% Completed | 15/131 [02:26<22:57, 11.87s/it]
+T+0201s available=19.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  11% Completed | 15/131 [02:26<22:57, 11.87s/it]
+T+0203s available=20.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  12% Completed | 16/131 [02:33<19:46, 10.32s/it]
+T+0205s available=20.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  12% Completed | 16/131 [02:33<19:46, 10.32s/it]
+T+0207s available=19.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  12% Completed | 16/131 [02:33<19:46, 10.32s/it]
+T+0210s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  12% Completed | 16/131 [02:33<19:46, 10.32s/it]
+T+0212s available=19.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  12% Completed | 16/131 [02:33<19:46, 10.32s/it]
+T+0214s available=21.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  13% Completed | 17/131 [02:43<19:44, 10.39s/it]
+T+0216s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  13% Completed | 17/131 [02:43<19:44, 10.39s/it]
+T+0218s available=19.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  13% Completed | 17/131 [02:43<19:44, 10.39s/it]
+T+0220s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  14% Completed | 18/131 [02:49<17:05,  9.08s/it]
+T+0222s available=20.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  14% Completed | 18/131 [02:49<17:05,  9.08s/it]
+T+0224s available=20.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  14% Completed | 18/131 [02:49<17:05,  9.08s/it]
+T+0226s available=20.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  14% Completed | 18/131 [02:49<17:05,  9.08s/it]
+T+0228s available=20.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  14% Completed | 18/131 [02:49<17:05,  9.08s/it]
+T+0230s available=21.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  15% Completed | 19/131 [03:00<17:50,  9.56s/it]
+T+0232s available=20.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  15% Completed | 19/131 [03:00<17:50,  9.56s/it]
+T+0234s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  15% Completed | 19/131 [03:00<17:50,  9.56s/it]
+T+0236s available=20.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  15% Completed | 19/131 [03:00<17:50,  9.56s/it]
+T+0238s available=19.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  15% Completed | 20/131 [03:08<16:58,  9.18s/it]
+T+0240s available=20.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  15% Completed | 20/131 [03:08<16:58,  9.18s/it]
+T+0242s available=20.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  15% Completed | 20/131 [03:08<16:58,  9.18s/it]
+T+0244s available=20.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  16% Completed | 21/131 [03:14<15:08,  8.26s/it]
+T+0246s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  28% Completed | 37/131 [03:15<01:16,  1.22it/s]
+T+0248s available=21.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  28% Completed | 37/131 [03:15<01:16,  1.22it/s]
+T+0250s available=21.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  28% Completed | 37/131 [03:15<01:16,  1.22it/s]
+T+0252s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  29% Completed | 38/131 [03:22<02:02,  1.32s/it]
+T+0254s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  29% Completed | 38/131 [03:22<02:02,  1.32s/it]
+T+0256s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  30% Completed | 39/131 [03:26<02:19,  1.51s/it]
+T+0258s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  30% Completed | 39/131 [03:26<02:19,  1.51s/it]
+T+0260s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  30% Completed | 39/131 [03:26<02:19,  1.51s/it]
+T+0262s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  30% Completed | 39/131 [03:26<02:19,  1.51s/it]
+T+0264s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  31% Completed | 40/131 [03:33<03:23,  2.23s/it]
+T+0267s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  31% Completed | 40/131 [03:33<03:23,  2.23s/it]
+T+0269s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  31% Completed | 41/131 [03:38<03:54,  2.60s/it]
+T+0271s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  31% Completed | 41/131 [03:38<03:54,  2.60s/it]
+T+0273s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  31% Completed | 41/131 [03:38<03:54,  2.60s/it]
+T+0275s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  32% Completed | 42/131 [03:45<04:58,  3.36s/it]
+T+0277s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  32% Completed | 42/131 [03:45<04:58,  3.36s/it]
+T+0279s available=21.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  32% Completed | 42/131 [03:45<04:58,  3.36s/it]
+T+0281s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  33% Completed | 43/131 [03:49<05:11,  3.54s/it]
+T+0283s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  33% Completed | 43/131 [03:49<05:11,  3.54s/it]
+T+0285s available=21.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  33% Completed | 43/131 [03:49<05:11,  3.54s/it]
+T+0287s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  34% Completed | 44/131 [03:56<06:16,  4.32s/it]
+T+0289s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  34% Completed | 44/131 [03:56<06:16,  4.32s/it]
+T+0291s available=22.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  34% Completed | 45/131 [04:01<06:15,  4.36s/it]
+T+0293s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  34% Completed | 45/131 [04:01<06:15,  4.36s/it]
+T+0295s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  34% Completed | 45/131 [04:01<06:15,  4.36s/it]
+T+0297s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  34% Completed | 45/131 [04:01<06:15,  4.36s/it]
+T+0299s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  35% Completed | 46/131 [04:08<07:10,  5.06s/it]
+T+0301s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  35% Completed | 46/131 [04:08<07:10,  5.06s/it]
+T+0303s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  36% Completed | 47/131 [04:11<06:37,  4.73s/it]
+T+0305s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  36% Completed | 47/131 [04:11<06:37,  4.73s/it]
+T+0307s available=21.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  36% Completed | 47/131 [04:11<06:37,  4.73s/it]
+T+0309s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  37% Completed | 48/131 [04:18<07:20,  5.31s/it]
+T+0311s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  37% Completed | 48/131 [04:18<07:20,  5.31s/it]
+T+0313s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  37% Completed | 49/131 [04:23<06:52,  5.03s/it]
+T+0315s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  37% Completed | 49/131 [04:23<06:52,  5.03s/it]
+T+0317s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  37% Completed | 49/131 [04:23<06:52,  5.03s/it]
+T+0319s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  38% Completed | 50/131 [04:29<07:18,  5.42s/it]
+T+0321s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  38% Completed | 50/131 [04:29<07:18,  5.42s/it]
+T+0323s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  39% Completed | 51/131 [04:32<06:28,  4.86s/it]
+T+0326s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  39% Completed | 51/131 [04:32<06:28,  4.86s/it]
+T+0328s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  39% Completed | 51/131 [04:32<06:28,  4.86s/it]
+T+0330s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  40% Completed | 52/131 [04:38<06:50,  5.19s/it]
+T+0332s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  40% Completed | 52/131 [04:38<06:50,  5.19s/it]
+T+0334s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  40% Completed | 53/131 [04:43<06:27,  4.97s/it]
+T+0336s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  40% Completed | 53/131 [04:43<06:27,  4.97s/it]
+T+0338s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  40% Completed | 53/131 [04:43<06:27,  4.97s/it]
+T+0340s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  41% Completed | 54/131 [04:49<06:55,  5.39s/it]
+T+0342s available=22.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  42% Completed | 55/131 [04:52<05:48,  4.59s/it]
+T+0344s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  42% Completed | 55/131 [04:52<05:48,  4.59s/it]
+T+0346s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  42% Completed | 55/131 [04:52<05:48,  4.59s/it]
+T+0348s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  43% Completed | 56/131 [04:58<06:18,  5.04s/it]
+T+0350s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  43% Completed | 56/131 [04:58<06:18,  5.04s/it]
+T+0352s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  44% Completed | 57/131 [05:02<05:45,  4.67s/it]
+T+0354s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  44% Completed | 57/131 [05:02<05:45,  4.67s/it]
+T+0356s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  44% Completed | 57/131 [05:02<05:45,  4.67s/it]
+T+0358s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  44% Completed | 57/131 [05:02<05:45,  4.67s/it]
+T+0360s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  44% Completed | 58/131 [05:09<06:24,  5.26s/it]
+T+0362s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  46% Completed | 60/131 [05:12<04:00,  3.39s/it]
+T+0364s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  46% Completed | 60/131 [05:12<04:00,  3.39s/it]
+T+0366s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  46% Completed | 60/131 [05:12<04:00,  3.39s/it]
+T+0368s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  46% Completed | 60/131 [05:12<04:00,  3.39s/it]
+T+0370s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  47% Completed | 61/131 [05:19<05:13,  4.47s/it]
+T+0372s available=21.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  47% Completed | 61/131 [05:19<05:13,  4.47s/it]
+T+0374s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  47% Completed | 62/131 [05:24<05:08,  4.47s/it]
+T+0376s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  47% Completed | 62/131 [05:24<05:08,  4.47s/it]
+T+0379s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  47% Completed | 62/131 [05:24<05:08,  4.47s/it]
+T+0381s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  48% Completed | 63/131 [05:30<05:47,  5.12s/it]
+T+0383s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  48% Completed | 63/131 [05:30<05:47,  5.12s/it]
+T+0385s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  49% Completed | 64/131 [05:35<05:26,  4.87s/it]
+T+0387s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  49% Completed | 64/131 [05:35<05:26,  4.87s/it]
+T+0389s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  49% Completed | 64/131 [05:35<05:26,  4.87s/it]
+T+0391s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  49% Completed | 64/131 [05:35<05:26,  4.87s/it]
+T+0393s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  50% Completed | 65/131 [05:42<06:03,  5.51s/it]
+T+0395s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  50% Completed | 66/131 [05:45<05:12,  4.80s/it]
+T+0397s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  50% Completed | 66/131 [05:45<05:12,  4.80s/it]
+T+0399s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  50% Completed | 66/131 [05:45<05:12,  4.80s/it]
+T+0401s available=21.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  50% Completed | 66/131 [05:45<05:12,  4.80s/it]
+T+0403s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  51% Completed | 67/131 [05:52<05:49,  5.46s/it]
+T+0405s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  51% Completed | 67/131 [05:52<05:49,  5.46s/it]
+T+0407s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  52% Completed | 68/131 [05:56<05:30,  5.24s/it]
+T+0409s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  52% Completed | 68/131 [05:56<05:30,  5.24s/it]
+T+0411s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  52% Completed | 68/131 [05:56<05:30,  5.24s/it]
+T+0413s available=21.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  52% Completed | 68/131 [05:56<05:30,  5.24s/it]
+T+0415s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  53% Completed | 69/131 [06:04<06:01,  5.84s/it]
+T+0417s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  53% Completed | 70/131 [06:07<05:11,  5.10s/it]
+T+0419s available=21.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  53% Completed | 70/131 [06:07<05:11,  5.10s/it]
+T+0421s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  53% Completed | 70/131 [06:07<05:11,  5.10s/it]
+T+0423s available=21.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  53% Completed | 70/131 [06:07<05:11,  5.10s/it]
+T+0425s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  54% Completed | 71/131 [06:14<05:36,  5.60s/it]
+T+0427s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  54% Completed | 71/131 [06:14<05:36,  5.60s/it]
+T+0429s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  55% Completed | 72/131 [06:18<05:02,  5.12s/it]
+T+0431s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  55% Completed | 72/131 [06:18<05:02,  5.12s/it]
+T+0433s available=21.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  55% Completed | 72/131 [06:18<05:02,  5.12s/it]
+T+0436s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  56% Completed | 73/131 [06:25<05:26,  5.63s/it]
+T+0438s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  56% Completed | 74/131 [06:28<04:35,  4.84s/it]
+T+0440s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  56% Completed | 74/131 [06:28<04:35,  4.84s/it]
+T+0442s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  56% Completed | 74/131 [06:28<04:35,  4.84s/it]
+T+0444s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  56% Completed | 74/131 [06:28<04:35,  4.84s/it]
+T+0446s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  57% Completed | 75/131 [06:34<05:02,  5.39s/it]
+T+0448s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  57% Completed | 75/131 [06:34<05:02,  5.39s/it]
+T+0450s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  58% Completed | 76/131 [06:39<04:46,  5.20s/it]
+T+0452s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  58% Completed | 76/131 [06:39<04:46,  5.20s/it]
+T+0454s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  58% Completed | 76/131 [06:39<04:46,  5.20s/it]
+T+0456s available=22.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  59% Completed | 77/131 [06:46<05:08,  5.72s/it]
+T+0458s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  59% Completed | 77/131 [06:46<05:08,  5.72s/it]
+T+0460s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  60% Completed | 78/131 [06:49<04:22,  4.95s/it]
+T+0462s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  60% Completed | 78/131 [06:49<04:22,  4.95s/it]
+T+0464s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  60% Completed | 78/131 [06:49<04:22,  4.95s/it]
+T+0466s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  60% Completed | 79/131 [06:55<04:34,  5.28s/it]
+T+0468s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  61% Completed | 80/131 [06:58<03:46,  4.45s/it]
+T+0470s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  61% Completed | 80/131 [06:58<03:46,  4.45s/it]
+T+0472s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  61% Completed | 80/131 [06:58<03:46,  4.45s/it]
+T+0474s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  62% Completed | 81/131 [07:03<03:57,  4.75s/it]
+T+0476s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  62% Completed | 81/131 [07:03<03:57,  4.75s/it]
+T+0478s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  63% Completed | 82/131 [07:07<03:33,  4.37s/it]
+T+0480s available=21.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  63% Completed | 82/131 [07:07<03:33,  4.37s/it]
+T+0482s available=21.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  63% Completed | 82/131 [07:07<03:33,  4.37s/it]
+T+0484s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  63% Completed | 83/131 [07:13<03:58,  4.96s/it]
+T+0486s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  64% Completed | 84/131 [07:16<03:19,  4.25s/it]
+T+0489s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  64% Completed | 84/131 [07:16<03:19,  4.25s/it]
+T+0491s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  64% Completed | 84/131 [07:16<03:19,  4.25s/it]
+T+0493s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  65% Completed | 85/131 [07:21<03:32,  4.63s/it]
+T+0495s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  66% Completed | 86/131 [07:24<03:12,  4.27s/it]
+T+0497s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  66% Completed | 86/131 [07:24<03:12,  4.27s/it]
+T+0499s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  66% Completed | 86/131 [07:24<03:12,  4.27s/it]
+T+0501s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  66% Completed | 87/131 [07:30<03:22,  4.60s/it]
+T+0503s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  66% Completed | 87/131 [07:30<03:22,  4.60s/it]
+T+0505s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  67% Completed | 88/131 [07:33<03:03,  4.27s/it]
+T+0507s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  67% Completed | 88/131 [07:33<03:03,  4.27s/it]
+T+0509s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  67% Completed | 88/131 [07:33<03:03,  4.27s/it]
+T+0511s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  68% Completed | 89/131 [07:39<03:20,  4.77s/it]
+T+0513s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  68% Completed | 89/131 [07:39<03:20,  4.77s/it]
+T+0515s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  69% Completed | 90/131 [07:43<03:07,  4.58s/it]
+T+0517s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  69% Completed | 90/131 [07:43<03:07,  4.58s/it]
+T+0519s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  69% Completed | 90/131 [07:43<03:07,  4.58s/it]
+T+0521s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  69% Completed | 91/131 [07:50<03:22,  5.06s/it]
+T+0523s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  70% Completed | 92/131 [07:52<02:50,  4.38s/it]
+T+0525s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  70% Completed | 92/131 [07:52<02:50,  4.38s/it]
+T+0527s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  70% Completed | 92/131 [07:52<02:50,  4.38s/it]
+T+0529s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  71% Completed | 93/131 [07:59<03:11,  5.04s/it]
+T+0531s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  71% Completed | 93/131 [07:59<03:11,  5.04s/it]
+T+0533s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  72% Completed | 94/131 [08:03<02:58,  4.83s/it]
+T+0535s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  72% Completed | 94/131 [08:03<02:58,  4.83s/it]
+T+0537s available=21.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  72% Completed | 94/131 [08:03<02:58,  4.83s/it]
+T+0539s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  72% Completed | 94/131 [08:03<02:58,  4.83s/it]
+T+0541s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  73% Completed | 95/131 [08:10<03:11,  5.32s/it]
+T+0543s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  73% Completed | 95/131 [08:10<03:11,  5.32s/it]
+T+0546s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  73% Completed | 96/131 [08:14<02:52,  4.93s/it]
+T+0548s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  73% Completed | 96/131 [08:14<02:52,  4.93s/it]
+T+0550s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  73% Completed | 96/131 [08:14<02:52,  4.93s/it]
+T+0552s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  74% Completed | 97/131 [08:20<02:59,  5.28s/it]
+T+0554s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  75% Completed | 98/131 [08:23<02:35,  4.70s/it]
+T+0556s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  75% Completed | 98/131 [08:23<02:35,  4.70s/it]
+T+0558s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  75% Completed | 98/131 [08:23<02:35,  4.70s/it]
+T+0560s available=22.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  76% Completed | 99/131 [08:29<02:44,  5.14s/it]
+T+0562s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  76% Completed | 99/131 [08:29<02:44,  5.14s/it]
+T+0564s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  76% Completed | 100/131 [08:32<02:19,  4.50s/it]
+T+0566s available=21.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  76% Completed | 100/131 [08:32<02:19,  4.50s/it]
+T+0568s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  76% Completed | 100/131 [08:32<02:19,  4.50s/it]
+T+0570s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  77% Completed | 101/131 [08:39<02:33,  5.10s/it]
+T+0572s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  77% Completed | 101/131 [08:39<02:33,  5.10s/it]
+T+0574s available=22.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  78% Completed | 102/131 [08:44<02:26,  5.04s/it]
+T+0576s available=21.6GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  78% Completed | 102/131 [08:44<02:26,  5.04s/it]
+T+0578s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  78% Completed | 102/131 [08:44<02:26,  5.04s/it]
+T+0580s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  78% Completed | 102/131 [08:44<02:26,  5.04s/it]
+T+0582s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  79% Completed | 103/131 [08:50<02:34,  5.52s/it]
+T+0584s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  79% Completed | 104/131 [08:54<02:11,  4.88s/it]
+T+0586s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  79% Completed | 104/131 [08:54<02:11,  4.88s/it]
+T+0588s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  79% Completed | 104/131 [08:54<02:11,  4.88s/it]
+T+0590s available=22.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  80% Completed | 105/131 [09:00<02:17,  5.28s/it]
+T+0592s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  80% Completed | 105/131 [09:00<02:17,  5.28s/it]
+T+0594s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  81% Completed | 106/131 [09:04<02:03,  4.94s/it]
+T+0596s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  81% Completed | 106/131 [09:04<02:03,  4.94s/it]
+T+0598s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  81% Completed | 106/131 [09:04<02:03,  4.94s/it]
+T+0600s available=22.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  82% Completed | 107/131 [09:10<02:07,  5.31s/it]
+T+0602s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  82% Completed | 107/131 [09:10<02:07,  5.31s/it]
+T+0605s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  82% Completed | 108/131 [09:14<01:50,  4.82s/it]
+T+0607s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  82% Completed | 108/131 [09:14<01:50,  4.82s/it]
+T+0609s available=21.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  82% Completed | 108/131 [09:14<01:50,  4.82s/it]
+T+0611s available=22.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  83% Completed | 109/131 [09:20<01:56,  5.30s/it]
+T+0613s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  83% Completed | 109/131 [09:20<01:56,  5.30s/it]
+T+0615s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  84% Completed | 110/131 [09:23<01:34,  4.50s/it]
+T+0617s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  84% Completed | 110/131 [09:23<01:34,  4.50s/it]
+T+0619s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  84% Completed | 110/131 [09:23<01:34,  4.50s/it]
+T+0621s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  85% Completed | 111/131 [09:30<01:41,  5.09s/it]
+T+0623s available=21.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  85% Completed | 111/131 [09:30<01:41,  5.09s/it]
+T+0625s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  85% Completed | 112/131 [09:34<01:31,  4.80s/it]
+T+0627s available=21.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  85% Completed | 112/131 [09:34<01:31,  4.80s/it]
+T+0629s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  85% Completed | 112/131 [09:34<01:31,  4.80s/it]
+T+0631s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  86% Completed | 113/131 [09:40<01:33,  5.19s/it]
+T+0633s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  87% Completed | 114/131 [09:43<01:16,  4.51s/it]
+T+0635s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  87% Completed | 114/131 [09:43<01:16,  4.51s/it]
+T+0637s available=21.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  87% Completed | 114/131 [09:43<01:16,  4.51s/it]
+T+0639s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  88% Completed | 115/131 [09:49<01:20,  5.02s/it]
+T+0641s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  88% Completed | 115/131 [09:49<01:20,  5.02s/it]
+T+0643s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  89% Completed | 116/131 [09:52<01:08,  4.57s/it]
+T+0645s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  89% Completed | 116/131 [09:52<01:08,  4.57s/it]
+T+0647s available=21.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  89% Completed | 116/131 [09:52<01:08,  4.57s/it]
+T+0649s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  89% Completed | 117/131 [09:58<01:09,  5.00s/it]
+T+0651s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  89% Completed | 117/131 [09:58<01:09,  5.00s/it]
+T+0653s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  90% Completed | 118/131 [10:02<00:58,  4.51s/it]
+T+0655s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  90% Completed | 118/131 [10:02<00:58,  4.51s/it]
+T+0657s available=21.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  90% Completed | 118/131 [10:02<00:58,  4.51s/it]
+T+0660s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  91% Completed | 119/131 [10:08<01:00,  5.03s/it]
+T+0662s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  92% Completed | 120/131 [10:12<00:50,  4.57s/it]
+T+0664s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  92% Completed | 120/131 [10:12<00:50,  4.57s/it]
+T+0666s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  92% Completed | 120/131 [10:12<00:50,  4.57s/it]
+T+0668s available=22.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  92% Completed | 121/131 [10:18<00:50,  5.06s/it]
+T+0670s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  92% Completed | 121/131 [10:18<00:50,  5.06s/it]
+T+0672s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  93% Completed | 122/131 [10:21<00:41,  4.64s/it]
+T+0674s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  93% Completed | 122/131 [10:21<00:41,  4.64s/it]
+T+0676s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  93% Completed | 122/131 [10:21<00:41,  4.64s/it]
+T+0678s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  94% Completed | 123/131 [10:28<00:41,  5.19s/it]
+T+0680s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  94% Completed | 123/131 [10:28<00:41,  5.19s/it]
+T+0682s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  95% Completed | 124/131 [10:31<00:31,  4.46s/it]
+T+0684s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  95% Completed | 124/131 [10:31<00:31,  4.46s/it]
+T+0686s available=21.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  95% Completed | 124/131 [10:31<00:31,  4.46s/it]
+T+0688s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  95% Completed | 125/131 [10:37<00:30,  5.09s/it]
+T+0690s available=22.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  95% Completed | 125/131 [10:37<00:30,  5.09s/it]
+T+0692s available=22.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  96% Completed | 126/131 [10:42<00:24,  4.86s/it]
+T+0694s available=22.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  96% Completed | 126/131 [10:42<00:24,  4.86s/it]
+T+0696s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  96% Completed | 126/131 [10:42<00:24,  4.86s/it]
+T+0698s available=21.3GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  97% Completed | 127/131 [10:48<00:21,  5.47s/it]
+T+0700s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  97% Completed | 127/131 [10:48<00:21,  5.47s/it]
+T+0702s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  98% Completed | 128/131 [10:52<00:15,  5.03s/it]
+T+0704s available=22.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  98% Completed | 128/131 [10:52<00:15,  5.03s/it]
+T+0706s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  98% Completed | 128/131 [10:52<00:15,  5.03s/it]
+T+0708s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  98% Completed | 128/131 [10:52<00:15,  5.03s/it]
+T+0710s available=21.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  98% Completed | 129/131 [10:59<00:10,  5.46s/it]
+T+0712s available=21.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  98% Completed | 129/131 [10:59<00:10,  5.46s/it]
+T+0714s available=21.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  99% Completed | 130/131 [11:03<00:05,  5.03s/it]
+T+0716s available=21.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  99% Completed | 130/131 [11:03<00:05,  5.03s/it]
+T+0719s available=23.4GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:39 [deep_gemm.py:131] DeepGEMM E8M0 enabled on current platform.
+T+0721s available=23.2GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:39 [deep_gemm.py:131] DeepGEMM E8M0 enabled on current platform.
+T+0723s available=15.5GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:39 [deep_gemm.py:131] DeepGEMM E8M0 enabled on current platform.
+T+0725s available=16.8GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0727s available=22.7GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0729s available=14.8GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0731s available=16.8GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0733s available=20.9GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0735s available=22.2GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0737s available=13.3GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0739s available=18.2GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0741s available=20.4GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0743s available=19.2GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0745s available=14.6GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0747s available=15.6GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0749s available=20.9GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0751s available=22.3GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0753s available=13.8GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0755s available=18.9GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0757s available=20.0GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:46:46 [fp8.py:713] Using MoEPrepareAndFinalizeNoDPEPModular
+T+0759s available=19.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:   2% Completed | 3/131 [00:00<00:30,  4.24it/s]
+T+0761s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  29% Completed | 38/131 [00:01<00:02, 37.57it/s]
+T+0763s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  37% Completed | 49/131 [00:04<00:11,  7.27it/s]
+T+0766s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  43% Completed | 56/131 [00:06<00:17,  4.20it/s]
+T+0768s available=19.5GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  45% Completed | 59/131 [00:07<00:20,  3.44it/s]
+T+0770s available=19.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  45% Completed | 59/131 [00:07<00:20,  3.44it/s]
+T+0772s available=18.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  45% Completed | 59/131 [00:07<00:20,  3.44it/s]
+T+0774s available=19.4GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  47% Completed | 61/131 [00:13<01:29,  1.28s/it]
+T+0776s available=19.8GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  48% Completed | 63/131 [00:17<01:38,  1.44s/it]
+T+0778s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  52% Completed | 68/131 [00:19<00:34,  1.80it/s]
+T+0780s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  56% Completed | 74/131 [00:21<00:21,  2.70it/s]
+T+0782s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  60% Completed | 79/131 [00:23<00:20,  2.58it/s]
+T+0784s available=20.1GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  66% Completed | 86/131 [00:25<00:12,  3.57it/s]
+T+0786s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  72% Completed | 94/131 [00:27<00:09,  4.05it/s]
+T+0788s available=20.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  78% Completed | 102/131 [00:29<00:07,  3.87it/s]
+T+0790s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  83% Completed | 109/131 [00:31<00:07,  3.13it/s]
+T+0792s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  89% Completed | 117/131 [00:33<00:03,  3.69it/s]
+T+0794s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  93% Completed | 122/131 [00:35<00:03,  2.48it/s]
+T+0796s available=20.2GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  97% Completed | 127/131 [00:37<00:01,  2.55it/s]
+T+0798s available=20.0GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  98% Completed | 129/131 [00:38<00:00,  2.51it/s]
+T+0800s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  98% Completed | 129/131 [00:38<00:00,  2.51it/s]
+T+0802s available=19.9GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  99% Completed | 130/131 [00:42<00:01,  1.56s/it]
+T+0804s available=19.7GiB | (Worker_TP0_EP0 pid=440) Loading safetensors checkpoint shards:  99% Completed | 130/131 [00:42<00:01,  1.56s/it]
+T+0806s available=19.9GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:48:08 [speculator.py:178] Draft model Qwen3_8FlashNextMTP does not support external multimodal embeddings. Embeddings 
+T+0808s available=20.4GiB | (Worker_TP0_EP0 pid=440) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0810s available=20.1GiB | (Worker_TP0_EP0 pid=440) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0812s available=18.6GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:48:14 [encoder_runner.py:120] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image 
+T+0814s available=17.8GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:48:14 [encoder_runner.py:120] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image 
+T+0816s available=17.7GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:48:14 [encoder_runner.py:120] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image 
+T+0818s available=17.2GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:48:14 [encoder_runner.py:120] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image 
+T+0821s available=17.3GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:48:14 [encoder_runner.py:120] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image 
+T+0823s available=17.3GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:48:14 [encoder_runner.py:120] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image 
+T+0825s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0827s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0829s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0831s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0833s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0835s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0837s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0839s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0841s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0843s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0845s available=17.1GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0847s available=17.1GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0849s available=17.1GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0851s available=17.1GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0853s available=17.1GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0855s available=17.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0857s available=17.1GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0859s available=18.0GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0861s available=18.2GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0863s available=18.0GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0865s available=17.6GiB | (Worker_TP0_EP0 pid=440)   warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+T+0867s available=9.3GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:49:08 [speculator.py:117] Fused multi-step draft decode is not supported by attention backend(s) QWEN38_FLASH_NEXT_EXP_QS
+T+0870s available=9.3GiB | (Worker_TP0_EP0 pid=440) INFO 09-07 21:49:08 [speculator.py:117] Fused multi-step draft decode is not supported by attention backend(s) QWEN38_FLASH_NEXT_EXP_QS
+T+0872s available=9.4GiB | (Worker_TP0_EP0 pid=440) 2026-09-07 21:49:12,195 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+T+0874s available=9.3GiB | (Worker_TP0_EP0 pid=440) 2026-09-07 21:49:12,195 - INFO - autotuner.py:829 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+T+0876s available=8.7GiB | (Worker_TP0_EP0 pid=440) 2026-09-07 21:49:16,434 - INFO - autotuner.py:2269 - flashinfer.jit: [Autotuner]: Saved 0 configs to /root/.cache/vllm/flashinfer_autot
+T+0878s available=8.5GiB | (Worker_TP0_EP0 pid=440) 2026-09-07 21:49:16,434 - INFO - autotuner.py:2269 - flashinfer.jit: [Autotuner]: Saved 0 configs to /root/.cache/vllm/flashinfer_autot
+T+0880s available=8.4GiB | (Worker_TP0_EP0 pid=440) 2026-09-07 21:49:16,434 - INFO - autotuner.py:2269 - flashinfer.jit: [Autotuner]: Saved 0 configs to /root/.cache/vllm/flashinfer_autot
+T+0882s available=8.3GiB | (Worker_TP0_EP0 pid=440) 2026-09-07 21:49:16,434 - INFO - autotuner.py:2269 - flashinfer.jit: [Autotuner]: Saved 0 configs to /root/.cache/vllm/flashinfer_autot
+T+0884s available=8.2GiB | (Worker_TP0_EP0 pid=440) 2026-09-07 21:49:16,434 - INFO - autotuner.py:2269 - flashinfer.jit: [Autotuner]: Saved 0 configs to /root/.cache/vllm/flashinfer_autot
+T+0886s available=8.2GiB | (Worker_TP0_EP0 pid=440) 2026-09-07 21:49:16,434 - INFO - autotuner.py:2269 - flashinfer.jit: [Autotuner]: Saved 0 configs to /root/.cache/vllm/flashinfer_autot
+T+0888s available=8.0GiB | (EngineCore pid=368) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0890s available=8.0GiB | (EngineCore pid=368) [transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_
+T+0892s available=8.5GiB | (EngineCore pid=368) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0894s available=8.4GiB | (APIServer pid=1) INFO 09-07 21:49:35 [hf.py:551] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to over
+T+0896s available=8.3GiB | (APIServer pid=1) INFO 09-07 21:49:35 [hf.py:551] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to over
+T+0898s available=8.0GiB | (APIServer pid=1) INFO 09-07 21:49:35 [hf.py:551] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to over
+T+0900s available=7.8GiB | (APIServer pid=1) INFO 09-07 21:49:35 [hf.py:551] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to over
+T+0902s available=7.8GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0904s available=7.8GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0906s available=7.0GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0908s available=6.9GiB | (APIServer pid=1) INFO:     Application startup complete.
+T+0910s available=6.9GiB | (APIServer pid=1) INFO:     Application startup complete.
+T+0912s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:59730 - "GET /health HTTP/1.1" 200 OK
+T+0914s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32972 - "GET /health HTTP/1.1" 200 OK
+T+0916s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32972 - "GET /health HTTP/1.1" 200 OK
+T+0918s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32984 - "GET /health HTTP/1.1" 200 OK
+T+0920s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32984 - "GET /health HTTP/1.1" 200 OK
+T+0922s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32984 - "GET /health HTTP/1.1" 200 OK
+T+0924s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32984 - "GET /health HTTP/1.1" 200 OK
+T+0927s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32984 - "GET /health HTTP/1.1" 200 OK
+T+0929s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32984 - "GET /health HTTP/1.1" 200 OK
+T+0931s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32984 - "GET /health HTTP/1.1" 200 OK
+T+0933s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32984 - "GET /health HTTP/1.1" 200 OK
+T+0935s available=6.9GiB | (APIServer pid=1) INFO:     127.0.0.1:32984 - "GET /health HTTP/1.1" 200 OK
+T+0937s available=6.8GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:50:19 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _qsa_sparse_paged_gqa_splitk_kernel. This c
+T+0939s available=6.8GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:50:20 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _topk_topp_kernel. This causes a latency sp
+T+0941s available=6.8GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:50:20 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _topk_topp_kernel. This causes a latency sp
+T+0943s available=6.8GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:50:20 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _topk_topp_kernel. This causes a latency sp
+T+0945s available=6.9GiB | (APIServer pid=1) INFO:     192.168.8.10:58550 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+0947s available=6.9GiB | (APIServer pid=1) INFO:     192.168.8.10:58550 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+0949s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.42, Accepted throughput: 3.89 tokens/s, Drafted throughpu
+T+0951s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.42, Accepted throughput: 3.89 tokens/s, Drafted throughpu
+T+0953s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.42, Accepted throughput: 3.89 tokens/s, Drafted throughpu
+T+0955s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.42, Accepted throughput: 3.89 tokens/s, Drafted throughpu
+T+0957s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.42, Accepted throughput: 3.89 tokens/s, Drafted throughpu
+T+0959s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.74, Accepted throughput: 10.40 tokens/s, Drafted throughp
+T+0961s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.74, Accepted throughput: 10.40 tokens/s, Drafted throughp
+T+0963s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.74, Accepted throughput: 10.40 tokens/s, Drafted throughp
+T+0965s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.74, Accepted throughput: 10.40 tokens/s, Drafted throughp
+T+0968s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.74, Accepted throughput: 10.40 tokens/s, Drafted throughp
+T+0970s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:50:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.55, Accepted throughput: 5.60 tokens/s, Drafted throughpu
+T+0972s available=6.9GiB | (APIServer pid=1) INFO:     192.168.8.10:45800 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+0974s available=6.9GiB | (APIServer pid=1) INFO:     192.168.8.10:45800 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+0976s available=6.9GiB | (APIServer pid=1) INFO:     192.168.8.10:45800 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+0978s available=6.9GiB | (APIServer pid=1) INFO:     192.168.8.10:45800 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+0980s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.37, Accepted throughput: 22.80 tokens/s, Drafted throughp
+T+0982s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.37, Accepted throughput: 22.80 tokens/s, Drafted throughp
+T+0984s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.37, Accepted throughput: 22.80 tokens/s, Drafted throughp
+T+0986s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.37, Accepted throughput: 22.80 tokens/s, Drafted throughp
+T+0988s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.79, Accepted throughput: 18.60 tokens/s, Drafted throughp
+T+0990s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.79, Accepted throughput: 18.60 tokens/s, Drafted throughp
+T+0992s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.79, Accepted throughput: 18.60 tokens/s, Drafted throughp
+T+0994s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.79, Accepted throughput: 18.60 tokens/s, Drafted throughp
+T+0996s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.79, Accepted throughput: 18.60 tokens/s, Drafted throughp
+T+0998s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.62, Accepted throughput: 8.10 tokens/s, Drafted throughpu
+T+1000s available=6.9GiB | (APIServer pid=1) INFO:     192.168.8.10:56090 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1002s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:56090 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1004s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:56090 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1007s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:56090 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1009s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.40, Accepted throughput: 32.30 tokens/s, Drafted throughp
+T+1011s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.40, Accepted throughput: 32.30 tokens/s, Drafted throughp
+T+1013s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.40, Accepted throughput: 32.30 tokens/s, Drafted throughp
+T+1015s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.40, Accepted throughput: 32.30 tokens/s, Drafted throughp
+T+1017s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.40, Accepted throughput: 32.30 tokens/s, Drafted throughp
+T+1019s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 29.20 tokens/s, Drafted throughp
+T+1021s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 29.20 tokens/s, Drafted throughp
+T+1023s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 29.20 tokens/s, Drafted throughp
+T+1025s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 29.20 tokens/s, Drafted throughp
+T+1027s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 29.20 tokens/s, Drafted throughp
+T+1029s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.76, Accepted throughput: 26.60 tokens/s, Drafted throughp
+T+1031s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.76, Accepted throughput: 26.60 tokens/s, Drafted throughp
+T+1033s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.76, Accepted throughput: 26.60 tokens/s, Drafted throughp
+T+1035s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.76, Accepted throughput: 26.60 tokens/s, Drafted throughp
+T+1037s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:51:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.76, Accepted throughput: 26.60 tokens/s, Drafted throughp
+T+1039s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.80, Accepted throughput: 10.10 tokens/s, Drafted throughp
+T+1042s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.80, Accepted throughput: 10.10 tokens/s, Drafted throughp
+T+1044s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.80, Accepted throughput: 10.10 tokens/s, Drafted throughp
+T+1046s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.80, Accepted throughput: 10.10 tokens/s, Drafted throughp
+T+1048s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.80, Accepted throughput: 10.10 tokens/s, Drafted throughp
+T+1050s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.37, Accepted throughput: 63.99 tokens/s, Drafted throughp
+T+1052s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.37, Accepted throughput: 63.99 tokens/s, Drafted throughp
+T+1054s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.37, Accepted throughput: 63.99 tokens/s, Drafted throughp
+T+1056s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.37, Accepted throughput: 63.99 tokens/s, Drafted throughp
+T+1058s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.37, Accepted throughput: 63.99 tokens/s, Drafted throughp
+T+1060s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.85, Accepted throughput: 46.20 tokens/s, Drafted throughp
+T+1062s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.85, Accepted throughput: 46.20 tokens/s, Drafted throughp
+T+1064s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.85, Accepted throughput: 46.20 tokens/s, Drafted throughp
+T+1066s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.85, Accepted throughput: 46.20 tokens/s, Drafted throughp
+T+1068s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.82, Accepted throughput: 42.59 tokens/s, Drafted throughp
+T+1070s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.82, Accepted throughput: 42.59 tokens/s, Drafted throughp
+T+1072s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.82, Accepted throughput: 42.59 tokens/s, Drafted throughp
+T+1075s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.82, Accepted throughput: 42.59 tokens/s, Drafted throughp
+T+1077s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.82, Accepted throughput: 42.59 tokens/s, Drafted throughp
+T+1079s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.74, Accepted throughput: 37.70 tokens/s, Drafted throughp
+T+1081s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.74, Accepted throughput: 37.70 tokens/s, Drafted throughp
+T+1083s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.74, Accepted throughput: 37.70 tokens/s, Drafted throughp
+T+1085s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:52:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.74, Accepted throughput: 37.70 tokens/s, Drafted throughp
+T+1087s available=6.9GiB | (APIServer pid=1) INFO:     192.168.8.10:58078 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1089s available=6.8GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:52:51 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _causal_conv1d_update_kernel. This causes a
+T+1091s available=6.8GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:52:51 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _causal_conv1d_update_kernel. This causes a
+T+1093s available=6.8GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:52:51 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _causal_conv1d_update_kernel. This causes a
+T+1095s available=6.8GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:52:51 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _causal_conv1d_update_kernel. This causes a
+T+1097s available=6.8GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:52:51 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _causal_conv1d_update_kernel. This causes a
+T+1099s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:53:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.53, Accepted throughput: 122.49 tokens/s, Drafted through
+T+1101s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.53, Accepted throughput: 122.49 tokens/s, Drafted through
+T+1103s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.53, Accepted throughput: 122.49 tokens/s, Drafted through
+T+1105s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.53, Accepted throughput: 122.49 tokens/s, Drafted through
+T+1107s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.53, Accepted throughput: 122.49 tokens/s, Drafted through
+T+1109s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.85, Accepted throughput: 72.00 tokens/s, Drafted throughp
+T+1112s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.85, Accepted throughput: 72.00 tokens/s, Drafted throughp
+T+1114s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.85, Accepted throughput: 72.00 tokens/s, Drafted throughp
+T+1116s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.85, Accepted throughput: 72.00 tokens/s, Drafted throughp
+T+1118s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.85, Accepted throughput: 72.00 tokens/s, Drafted throughp
+T+1120s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 69.29 tokens/s, Drafted throughp
+T+1122s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 69.29 tokens/s, Drafted throughp
+T+1124s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 69.29 tokens/s, Drafted throughp
+T+1126s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 69.29 tokens/s, Drafted throughp
+T+1128s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.89, Accepted throughput: 71.19 tokens/s, Drafted throughp
+T+1130s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.89, Accepted throughput: 71.19 tokens/s, Drafted throughp
+T+1132s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.89, Accepted throughput: 71.19 tokens/s, Drafted throughp
+T+1134s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.89, Accepted throughput: 71.19 tokens/s, Drafted throughp
+T+1136s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.89, Accepted throughput: 71.19 tokens/s, Drafted throughp
+T+1138s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.73, Accepted throughput: 56.80 tokens/s, Drafted throughp
+T+1140s available=6.9GiB | (APIServer pid=1) INFO 09-07 21:53:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.73, Accepted throughput: 56.80 tokens/s, Drafted throughp
+T+1143s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:53:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.73, Accepted throughput: 56.80 tokens/s, Drafted throughp
+T+1145s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:53:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.73, Accepted throughput: 56.80 tokens/s, Drafted throughp
+T+1147s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:53:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.73, Accepted throughput: 56.80 tokens/s, Drafted throughp
+T+1149s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:53:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.70, Accepted throughput: 8.70 tokens/s, Drafted throughpu
+T+1151s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:53:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.70, Accepted throughput: 8.70 tokens/s, Drafted throughpu
+T+1153s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:53:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.70, Accepted throughput: 8.70 tokens/s, Drafted throughpu
+T+1155s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:53:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.70, Accepted throughput: 8.70 tokens/s, Drafted throughpu
+T+1157s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:53:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.70, Accepted throughput: 8.70 tokens/s, Drafted throughpu
+T+1159s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.59, Accepted throughput: 138.60 tokens/s, Drafted through
+T+1161s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.59, Accepted throughput: 138.60 tokens/s, Drafted through
+T+1163s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.59, Accepted throughput: 138.60 tokens/s, Drafted through
+T+1165s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:54:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.59, Accepted throughput: 138.60 tokens/s, Drafted through
+T+1167s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.59, Accepted throughput: 138.60 tokens/s, Drafted through
+T+1169s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.94, Accepted throughput: 97.19 tokens/s, Drafted throughp
+T+1171s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.94, Accepted throughput: 97.19 tokens/s, Drafted throughp
+T+1173s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.94, Accepted throughput: 97.19 tokens/s, Drafted throughp
+T+1176s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.94, Accepted throughput: 97.19 tokens/s, Drafted throughp
+T+1178s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.94, Accepted throughput: 97.19 tokens/s, Drafted throughp
+T+1180s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 85.39 tokens/s, Drafted throughp
+T+1182s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 85.39 tokens/s, Drafted throughp
+T+1184s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 85.39 tokens/s, Drafted throughp
+T+1186s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 85.39 tokens/s, Drafted throughp
+T+1188s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 85.39 tokens/s, Drafted throughp
+T+1190s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 80.29 tokens/s, Drafted throughp
+T+1192s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 80.29 tokens/s, Drafted throughp
+T+1194s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 80.29 tokens/s, Drafted throughp
+T+1196s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 80.29 tokens/s, Drafted throughp
+T+1198s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 83.39 tokens/s, Drafted throughp
+T+1200s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:54:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 83.39 tokens/s, Drafted throughp
+T+1202s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:39744 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1204s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:35606 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1206s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:35610 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1208s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:35640 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1211s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:35654 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1213s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:35654 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1215s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:35654 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1217s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:35654 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1219s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.17, Accepted throughput: 86.49 tokens/s, Drafted throughp
+T+1221s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.17, Accepted throughput: 86.49 tokens/s, Drafted throughp
+T+1223s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.17, Accepted throughput: 86.49 tokens/s, Drafted throughp
+T+1225s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.17, Accepted throughput: 86.49 tokens/s, Drafted throughp
+T+1227s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.17, Accepted throughput: 86.49 tokens/s, Drafted throughp
+T+1229s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 46.60 tokens/s, Drafted throughp
+T+1231s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:55:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 46.60 tokens/s, Drafted throughp
+T+1233s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 46.60 tokens/s, Drafted throughp
+T+1235s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 46.60 tokens/s, Drafted throughp
+T+1237s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 46.60 tokens/s, Drafted throughp
+T+1239s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:55:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.82, Accepted throughput: 45.90 tokens/s, Drafted throughp
+T+1241s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:55:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.82, Accepted throughput: 45.90 tokens/s, Drafted throughp
+T+1244s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.82, Accepted throughput: 45.90 tokens/s, Drafted throughp
+T+1246s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:55:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.82, Accepted throughput: 45.90 tokens/s, Drafted throughp
+T+1248s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:55:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.82, Accepted throughput: 45.90 tokens/s, Drafted throughp
+T+1250s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:55:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.79, Accepted throughput: 43.19 tokens/s, Drafted throughp
+T+1252s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:55:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.79, Accepted throughput: 43.19 tokens/s, Drafted throughp
+T+1254s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:55:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.79, Accepted throughput: 43.19 tokens/s, Drafted throughp
+T+1256s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:55:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.79, Accepted throughput: 43.19 tokens/s, Drafted throughp
+T+1258s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.79, Accepted throughput: 43.19 tokens/s, Drafted throughp
+T+1260s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:36944 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1262s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:36944 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1264s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:36944 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1266s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:36944 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1268s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.74, Accepted throughput: 123.48 tokens/s, Drafted through
+T+1270s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.74, Accepted throughput: 123.48 tokens/s, Drafted through
+T+1272s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.74, Accepted throughput: 123.48 tokens/s, Drafted through
+T+1274s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.74, Accepted throughput: 123.48 tokens/s, Drafted through
+T+1277s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:55:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.74, Accepted throughput: 123.48 tokens/s, Drafted through
+T+1279s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.04, Accepted throughput: 104.90 tokens/s, Drafted through
+T+1281s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.04, Accepted throughput: 104.90 tokens/s, Drafted through
+T+1283s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.04, Accepted throughput: 104.90 tokens/s, Drafted through
+T+1285s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.04, Accepted throughput: 104.90 tokens/s, Drafted through
+T+1287s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.04, Accepted throughput: 104.90 tokens/s, Drafted through
+T+1289s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.78, Accepted throughput: 80.89 tokens/s, Drafted throughp
+T+1291s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.78, Accepted throughput: 80.89 tokens/s, Drafted throughp
+T+1293s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.78, Accepted throughput: 80.89 tokens/s, Drafted throughp
+T+1295s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.78, Accepted throughput: 80.89 tokens/s, Drafted throughp
+T+1297s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.78, Accepted throughput: 80.89 tokens/s, Drafted throughp
+T+1299s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 82.08 tokens/s, Drafted throughp
+T+1301s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 82.08 tokens/s, Drafted throughp
+T+1303s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 82.08 tokens/s, Drafted throughp
+T+1305s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 82.08 tokens/s, Drafted throughp
+T+1307s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.83, Accepted throughput: 82.08 tokens/s, Drafted throughp
+T+1310s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.78, Accepted throughput: 75.18 tokens/s, Drafted throughp
+T+1312s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.78, Accepted throughput: 75.18 tokens/s, Drafted throughp
+T+1314s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.78, Accepted throughput: 75.18 tokens/s, Drafted throughp
+T+1316s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.78, Accepted throughput: 75.18 tokens/s, Drafted throughp
+T+1318s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:35618 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1320s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:35626 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1322s available=6.7GiB | (APIServer pid=1) INFO:     192.168.8.10:35646 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1324s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:40588 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1326s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:40604 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1328s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:56:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 89.19 tokens/s, Drafted throughp
+T+1330s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:40648 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1332s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:40648 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1334s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:40648 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1336s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:40648 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1339s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 114.09 tokens/s, Drafted through
+T+1341s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 114.09 tokens/s, Drafted through
+T+1343s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 114.09 tokens/s, Drafted through
+T+1345s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 114.09 tokens/s, Drafted through
+T+1347s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 114.09 tokens/s, Drafted through
+T+1349s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.99, Accepted throughput: 100.29 tokens/s, Drafted through
+T+1351s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.99, Accepted throughput: 100.29 tokens/s, Drafted through
+T+1353s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.99, Accepted throughput: 100.29 tokens/s, Drafted through
+T+1355s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.99, Accepted throughput: 100.29 tokens/s, Drafted through
+T+1357s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.99, Accepted throughput: 100.29 tokens/s, Drafted through
+T+1359s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.89, Accepted throughput: 86.40 tokens/s, Drafted throughp
+T+1361s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.89, Accepted throughput: 86.40 tokens/s, Drafted throughp
+T+1363s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.89, Accepted throughput: 86.40 tokens/s, Drafted throughp
+T+1365s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.89, Accepted throughput: 86.40 tokens/s, Drafted throughp
+T+1367s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.89, Accepted throughput: 86.40 tokens/s, Drafted throughp
+T+1370s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 78.70 tokens/s, Drafted throughp
+T+1372s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 78.70 tokens/s, Drafted throughp
+T+1374s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 78.70 tokens/s, Drafted throughp
+T+1376s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 78.70 tokens/s, Drafted throughp
+T+1378s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.81, Accepted throughput: 78.70 tokens/s, Drafted throughp
+T+1380s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:32980 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1382s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:33000 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1384s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:36830 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1386s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:36864 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1388s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:57:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.95, Accepted throughput: 74.90 tokens/s, Drafted throughp
+T+1390s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:36908 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1392s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:36924 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1394s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:36924 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1396s available=6.8GiB | (APIServer pid=1) INFO:     192.168.8.10:36924 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1398s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.25, Accepted throughput: 109.99 tokens/s, Drafted through
+T+1401s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.25, Accepted throughput: 109.99 tokens/s, Drafted through
+T+1403s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.25, Accepted throughput: 109.99 tokens/s, Drafted through
+T+1405s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.25, Accepted throughput: 109.99 tokens/s, Drafted through
+T+1407s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:58:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.25, Accepted throughput: 109.99 tokens/s, Drafted through
+T+1409s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:58:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.94, Accepted throughput: 79.59 tokens/s, Drafted throughp
+T+1411s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.94, Accepted throughput: 79.59 tokens/s, Drafted throughp
+T+1413s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.94, Accepted throughput: 79.59 tokens/s, Drafted throughp
+T+1415s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.94, Accepted throughput: 79.59 tokens/s, Drafted throughp
+T+1417s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.94, Accepted throughput: 79.59 tokens/s, Drafted throughp
+T+1419s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.87, Accepted throughput: 75.50 tokens/s, Drafted throughp
+T+1421s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.87, Accepted throughput: 75.50 tokens/s, Drafted throughp
+T+1423s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.87, Accepted throughput: 75.50 tokens/s, Drafted throughp
+T+1425s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.87, Accepted throughput: 75.50 tokens/s, Drafted throughp
+T+1427s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.87, Accepted throughput: 75.50 tokens/s, Drafted throughp
+T+1429s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 70.89 tokens/s, Drafted throughp
+T+1431s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 70.89 tokens/s, Drafted throughp
+T+1434s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 70.89 tokens/s, Drafted throughp
+T+1436s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 70.89 tokens/s, Drafted throughp
+T+1438s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.84, Accepted throughput: 70.89 tokens/s, Drafted throughp
+T+1440s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.71, Accepted throughput: 62.69 tokens/s, Drafted throughp
+T+1442s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.71, Accepted throughput: 62.69 tokens/s, Drafted throughp
+T+1444s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.71, Accepted throughput: 62.69 tokens/s, Drafted throughp
+T+1446s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.71, Accepted throughput: 62.69 tokens/s, Drafted throughp
+T+1448s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.71, Accepted throughput: 62.69 tokens/s, Drafted throughp
+T+1450s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:58:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.74, Accepted throughput: 31.50 tokens/s, Drafted throughp
+T+1452s available=6.7GiB | (APIServer pid=1) INFO:     192.168.8.10:43388 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1454s available=6.7GiB | (APIServer pid=1) INFO:     192.168.8.10:43388 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1456s available=6.7GiB | (APIServer pid=1) INFO:     192.168.8.10:43388 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1458s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:59:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.10, Accepted throughput: 12.40 tokens/s, Drafted throughp
+T+1460s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:59:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.10, Accepted throughput: 12.40 tokens/s, Drafted throughp
+T+1462s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:59:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.10, Accepted throughput: 12.40 tokens/s, Drafted throughp
+T+1464s available=6.8GiB | (APIServer pid=1) INFO 09-07 21:59:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.10, Accepted throughput: 12.40 tokens/s, Drafted throughp
+T+1466s available=6.7GiB | (APIServer pid=1) INFO:     192.168.8.10:35808 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1469s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:59:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.47, Accepted throughput: 13.40 tokens/s, Drafted throughp
+T+1471s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:59:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.47, Accepted throughput: 13.40 tokens/s, Drafted throughp
+T+1473s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:59:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.47, Accepted throughput: 13.40 tokens/s, Drafted throughp
+T+1475s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:59:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.47, Accepted throughput: 13.40 tokens/s, Drafted throughp
+T+1477s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:59:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.47, Accepted throughput: 13.40 tokens/s, Drafted throughp
+T+1479s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:59:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1481s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:59:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1483s available=6.6GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:59:23 [jit_monitor.py:141] Triton kernel JIT compilation during inference: layer_norm_fwd_kernel. This causes a latenc
+T+1485s available=6.4GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:59:23 [jit_monitor.py:141] Triton kernel JIT compilation during inference: layer_norm_fwd_kernel. This causes a latenc
+T+1487s available=6.4GiB | (Worker_TP0_EP0 pid=440) WARNING 09-07 21:59:23 [jit_monitor.py:141] Triton kernel JIT compilation during inference: layer_norm_fwd_kernel. This causes a latenc
+T+1489s available=6.4GiB | (APIServer pid=1) INFO 09-07 21:59:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.81, Accepted throughput: 8.40 tokens/s, Drafted throughpu
+T+1491s available=6.4GiB | (APIServer pid=1) INFO 09-07 21:59:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.81, Accepted throughput: 8.40 tokens/s, Drafted throughpu
+T+1493s available=6.4GiB | (APIServer pid=1) INFO 09-07 21:59:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.81, Accepted throughput: 8.40 tokens/s, Drafted throughpu
+T+1495s available=6.4GiB | (APIServer pid=1) INFO 09-07 21:59:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.81, Accepted throughput: 8.40 tokens/s, Drafted throughpu
+T+1497s available=6.4GiB | (APIServer pid=1) INFO 09-07 21:59:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.81, Accepted throughput: 8.40 tokens/s, Drafted throughpu
+T+1499s available=6.1GiB | (APIServer pid=1) INFO:     192.168.8.10:38466 - "POST /tokenize HTTP/1.1" 200 OK
+T+1501s available=6.2GiB | (APIServer pid=1) INFO:     192.168.8.10:38522 - "POST /tokenize HTTP/1.1" 200 OK
+T+1503s available=6.1GiB | (APIServer pid=1) INFO:     192.168.8.10:52176 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1506s available=6.1GiB | (APIServer pid=1) INFO:     192.168.8.10:52176 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1508s available=6.2GiB | (APIServer pid=1) INFO:     192.168.8.10:52176 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1510s available=6.1GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1512s available=6.1GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1514s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1516s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1518s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1520s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1522s available=6.1GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1524s available=6.1GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1526s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1528s available=6.1GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1530s available=6.1GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1532s available=6.1GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1534s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1536s available=6.1GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1538s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1540s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1543s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1545s available=6.1GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1547s available=6.1GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1549s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1551s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1553s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1555s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1557s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1559s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1561s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1563s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1565s available=6.2GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1567s available=6.7GiB | (APIServer pid=1) INFO 09-07 21:59:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1569s available=6.7GiB | (APIServer pid=1) INFO 09-07 22:00:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.96, Accepted throughput: 0.79 tokens/s, Drafted throughpu
+T+1571s available=6.6GiB | (APIServer pid=1) INFO 09-07 22:00:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.96, Accepted throughput: 0.79 tokens/s, Drafted throughpu
+T+1573s available=6.6GiB | (APIServer pid=1) INFO 09-07 22:00:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.96, Accepted throughput: 0.79 tokens/s, Drafted throughpu
+T+1575s available=6.6GiB | (APIServer pid=1) INFO 09-07 22:00:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.96, Accepted throughput: 0.79 tokens/s, Drafted throughpu
+T+1577s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:00:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.96, Accepted throughput: 0.79 tokens/s, Drafted throughpu
+T+1579s available=6.5GiB | (APIServer pid=1) INFO:     192.168.8.10:49028 - "POST /tokenize HTTP/1.1" 200 OK
+T+1581s available=6.2GiB | (APIServer pid=1) INFO:     192.168.8.10:49050 - "POST /tokenize HTTP/1.1" 200 OK
+T+1584s available=6.2GiB | (APIServer pid=1) INFO:     192.168.8.10:32864 - "POST /tokenize HTTP/1.1" 200 OK
+T+1586s available=6.1GiB | (APIServer pid=1) INFO:     192.168.8.10:32908 - "POST /tokenize HTTP/1.1" 200 OK
+T+1588s available=6.4GiB | (APIServer pid=1) INFO:     192.168.8.10:32914 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+T+1590s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1592s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1594s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1596s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1598s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1600s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1602s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1604s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1606s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1608s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1610s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1612s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1614s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1616s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1618s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1620s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1623s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1625s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1627s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1629s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1631s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1633s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1635s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1637s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1639s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1641s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1643s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1645s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1647s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1649s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1651s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1653s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1655s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1657s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1659s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1662s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1664s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1666s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1668s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1670s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1672s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1674s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1676s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1678s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1680s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1682s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1684s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1686s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:01:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs
+T+1688s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:02:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.01, Accepted throughput: 1.70 tokens/s, Drafted throughpu
+T+1690s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:02:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.01, Accepted throughput: 1.70 tokens/s, Drafted throughpu
+T+1692s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:02:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.01, Accepted throughput: 1.70 tokens/s, Drafted throughpu
+T+1694s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:02:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.01, Accepted throughput: 1.70 tokens/s, Drafted throughpu
+T+1696s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:02:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.01, Accepted throughput: 1.70 tokens/s, Drafted throughpu
+T+1698s available=6.1GiB | (APIServer pid=1) INFO:     192.168.8.10:60086 - "POST /tokenize HTTP/1.1" 200 OK
+T+1701s available=6.0GiB | (APIServer pid=1) INFO:     192.168.8.10:60112 - "POST /tokenize HTTP/1.1" 200 OK
+T+1703s available=6.0GiB | (APIServer pid=1) INFO:     192.168.8.10:60142 - "POST /tokenize HTTP/1.1" 200 OK
+T+1705s available=6.0GiB | (APIServer pid=1) INFO:     192.168.8.10:41270 - "POST /tokenize HTTP/1.1" 200 OK
+T+1707s available=6.0GiB | (APIServer pid=1) INFO:     192.168.8.10:41322 - "POST /tokenize HTTP/1.1" 200 OK
+T+1709s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1711s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1713s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1715s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1717s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1719s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1721s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1723s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1725s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1727s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1729s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1731s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1733s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1735s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1737s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1740s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1742s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1744s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1746s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1748s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1750s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1752s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1754s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1756s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1758s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1760s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1762s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1764s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1766s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1768s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1770s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1772s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1774s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1776s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1779s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1781s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1783s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1785s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1787s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1789s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1791s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1793s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1795s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1797s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1799s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1801s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1803s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1805s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1807s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1809s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1811s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1813s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1816s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1818s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1820s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1822s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1824s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1826s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1828s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:03:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1830s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.77, Accepted throughput: 0.35 tokens/s, Drafted throughpu
+T+1832s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.77, Accepted throughput: 0.35 tokens/s, Drafted throughpu
+T+1834s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.77, Accepted throughput: 0.35 tokens/s, Drafted throughpu
+T+1836s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.77, Accepted throughput: 0.35 tokens/s, Drafted throughpu
+T+1838s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.49, Accepted throughput: 19.90 tokens/s, Drafted throughp
+T+1840s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.49, Accepted throughput: 19.90 tokens/s, Drafted throughp
+T+1842s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.49, Accepted throughput: 19.90 tokens/s, Drafted throughp
+T+1844s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.49, Accepted throughput: 19.90 tokens/s, Drafted throughp
+T+1846s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.49, Accepted throughput: 19.90 tokens/s, Drafted throughp
+T+1848s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.50, Accepted throughput: 20.20 tokens/s, Drafted throughp
+T+1850s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.50, Accepted throughput: 20.20 tokens/s, Drafted throughp
+T+1853s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.50, Accepted throughput: 20.20 tokens/s, Drafted throughp
+T+1855s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.50, Accepted throughput: 20.20 tokens/s, Drafted throughp
+T+1857s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:30 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.50, Accepted throughput: 20.20 tokens/s, Drafted throughp
+T+1859s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 15.90 tokens/s, Drafted throughp
+T+1861s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 15.90 tokens/s, Drafted throughp
+T+1863s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 15.90 tokens/s, Drafted throughp
+T+1865s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 15.90 tokens/s, Drafted throughp
+T+1867s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:40 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.19, Accepted throughput: 15.90 tokens/s, Drafted throughp
+T+1869s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.27, Accepted throughput: 17.10 tokens/s, Drafted throughp
+T+1871s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.27, Accepted throughput: 17.10 tokens/s, Drafted throughp
+T+1873s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.27, Accepted throughput: 17.10 tokens/s, Drafted throughp
+T+1875s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.27, Accepted throughput: 17.10 tokens/s, Drafted throughp
+T+1877s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:05:50 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.27, Accepted throughput: 17.10 tokens/s, Drafted throughp
+T+1879s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.88, Accepted throughput: 11.90 tokens/s, Drafted throughp
+T+1881s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.88, Accepted throughput: 11.90 tokens/s, Drafted throughp
+T+1883s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.88, Accepted throughput: 11.90 tokens/s, Drafted throughp
+T+1885s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.88, Accepted throughput: 11.90 tokens/s, Drafted throughp
+T+1888s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:00 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.88, Accepted throughput: 11.90 tokens/s, Drafted throughp
+T+1890s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.87, Accepted throughput: 11.70 tokens/s, Drafted throughp
+T+1892s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.87, Accepted throughput: 11.70 tokens/s, Drafted throughp
+T+1894s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.87, Accepted throughput: 11.70 tokens/s, Drafted throughp
+T+1896s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.87, Accepted throughput: 11.70 tokens/s, Drafted throughp
+T+1898s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:10 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 1.87, Accepted throughput: 11.70 tokens/s, Drafted throughp
+T+1900s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.15, Accepted throughput: 10.70 tokens/s, Drafted throughp
+T+1902s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.15, Accepted throughput: 10.70 tokens/s, Drafted throughp
+T+1904s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.15, Accepted throughput: 10.70 tokens/s, Drafted throughp
+T+1906s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.15, Accepted throughput: 10.70 tokens/s, Drafted throughp
+T+1908s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:20 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.15, Accepted throughput: 10.70 tokens/s, Drafted throughp
+T+1910s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1912s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1914s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1916s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1918s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1920s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1922s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1924s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1926s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1928s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1930s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1932s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1934s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1936s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1939s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1941s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1943s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1945s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1947s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1949s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1951s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1953s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1955s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1957s available=6.0GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1959s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1961s available=6.5GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1963s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1965s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1967s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1969s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1971s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1973s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1975s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1977s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1979s available=6.3GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1981s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1983s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1985s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1987s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs
+T+1989s available=6.4GiB | (APIServer pid=1) INFO 09-07 22:06:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs

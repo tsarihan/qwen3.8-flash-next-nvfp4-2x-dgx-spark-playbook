@@ -1,0 +1,29 @@
+T+0000s available=115.0GiB | 
+T+0002s available=115.0GiB | 
+T+0004s available=114.9GiB | 
+T+0006s available=114.8GiB | 
+T+0008s available=114.8GiB | 
+T+0010s available=114.4GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0012s available=114.2GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0014s available=114.1GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0016s available=114.0GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0018s available=113.6GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0020s available=114.0GiB | (APIServer pid=1) INFO 09-07 21:33:21 [model.py:1965] Using max model len 262144
+T+0022s available=113.9GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0024s available=113.7GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0026s available=113.0GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0028s available=114.0GiB | (APIServer pid=1) INFO 09-07 21:33:29 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+T+0030s available=113.8GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0032s available=113.5GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0034s available=113.2GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0036s available=113.0GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0038s available=112.1GiB | (EngineCore pid=366) INFO 09-07 21:33:40 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=192.168.101.14, mq_connect
+T+0040s available=112.5GiB | (EngineCore pid=366) INFO 09-07 21:33:40 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=192.168.101.14, mq_connect
+T+0042s available=112.4GiB | (EngineCore pid=366) INFO 09-07 21:33:40 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=192.168.101.14, mq_connect
+T+0045s available=111.6GiB | (Worker pid=438) INFO 09-07 21:33:46 [parallel_state.py:1638] world_size=2 rank=0 local_rank=0 distributed_init_method=tcp://192.168.101.14:25400 backend=nccl
+T+0047s available=111.7GiB | (Worker pid=438) INFO 09-07 21:33:46 [parallel_state.py:1638] world_size=2 rank=0 local_rank=0 distributed_init_method=tcp://192.168.101.14:25400 backend=nccl
+T+0049s available=109.6GiB | (Worker_TP0_EP0 pid=438) INFO 09-07 21:33:50 [expert_map_manager.py:245] [EP Rank 0/2] Expert parallelism is enabled. Expert placement strategy: linear. Local/g
+T+0051s available=113.0GiB | (EngineCore pid=366) Exception: WorkerProc initialization failed due to an exception in a background process. See stack trace for root cause.
+T+0053s available=113.8GiB | (APIServer pid=1) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+T+0055s available=115.3GiB | (APIServer pid=1) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+container gone at T+55s

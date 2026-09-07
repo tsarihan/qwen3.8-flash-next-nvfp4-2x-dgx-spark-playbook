@@ -1,0 +1,65 @@
+{
+  "tag": "qwen38fn-fp8-pinned",
+  "model": "qwen3.8-flash-next-fp8",
+  "base_url": "http://192.168.8.10:8891/v1",
+  "needles": 5,
+  "results": [
+    {
+      "target": 4096,
+      "prompt_tokens": 4314,
+      "ttft_s": 3.569,
+      "prefill_tps": 1208.9,
+      "completion_tokens": 406,
+      "decode_tps": 37.24,
+      "total_s": 14.47,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer to user. Need parse input. User provided huge repetitive text with IMPORTANT FACT statements hidden. Need list every one, exact form '<label>: <value>'. Output only those lines, nothing else. Need include all IMPORTANT FACTs stated above. There are? Let's scan:\n1. IMPORTANT FACT: the "
+    },
+    {
+      "target": 32768,
+      "prompt_tokens": 33373,
+      "ttft_s": 15.497,
+      "prefill_tps": 2153.5,
+      "completion_tokens": 600,
+      "decode_tps": 37.2,
+      "total_s": 31.63,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer user's request. User pasted huge repetitive text with embedded IMPORTANT FACT lines. Need list every one exact form '<label>: <value>' output only those lines. Need identify facts:\n1 near beginning: IMPORTANT FACT: the vault authorization code is ARGON-SEVEN-FOUR-ZERO. Remember it.\n2:"
+    },
+    {
+      "target": 131072,
+      "prompt_tokens": 132971,
+      "ttft_s": 63.411,
+      "prefill_tps": 2097.0,
+      "completion_tokens": 486,
+      "decode_tps": 43.54,
+      "total_s": 74.57,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer user's request. Need parse IMPORTANT FACTs embedded in huge repeated text. User asks: \"Several IMPORTANT FACTs were stated above. List every one of them, each on its own line, in the exact form '<label>: <value>'. Output only those lines, nothing else.\"\n\nNeed extract all facts exactly"
+    }
+  ]
+}

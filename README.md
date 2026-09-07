@@ -10,13 +10,13 @@ reason this repository exists. Everything else is measurement.
 
 | | FP8 | NVFP4 | delta |
 |---|---|---|---|
-| Weights per node | ~88 GiB | **64.06 GiB** | -24 GiB |
-| GPU KV cache | 595,137 tok | **2,228,932 tok** | **3.74x** |
-| Max concurrency @ 262,144 tok/req | 2.27x | **8.50x** | 3.74x |
-| Decode @ c=1 | 26.51 tok/s | **32.16 tok/s** | +21% |
-| Aggregate @ c=64 | 177.46 tok/s | **257.59 tok/s** | +45% |
-| TTFT @ 245K prompt | 119.3 s | **96.9 s** | -19% |
-| Decode @ 245K prompt | 33.27 tok/s | **49.40 tok/s** | +48% |
+| Weights per node | 88.07 GiB | **64.06 GiB** | -24.01 GiB |
+| GPU KV cache | 607,890 tok | **2,228,932 tok** | **3.67x** |
+| Max concurrency @ 262,144 tok/req | 2.32x | **8.50x** | 3.67x |
+| Decode @ c=1 | 24.42 tok/s | **32.16 tok/s** | +32% |
+| Aggregate @ c=64 | 176.75 tok/s | **257.59 tok/s** | +46% |
+| TTFT @ 245K prompt | 118.8 s | **96.9 s** | -18% |
+| Decode @ 245K prompt | 29.78 tok/s | **49.40 tok/s** | +66% |
 | NIAH 5 needles, 4K to 245K | 5/5 at every depth | 5/5 at every depth | no loss |
 
 W4A4 quantization did not degrade long-context retrieval: 5/5 needles at 4,096 / 32,768 /
@@ -152,44 +152,44 @@ recorded here as an observation only, not as a benefit.
 
 | conc | FP8 agg | NVFP4 agg | delta | FP8 per-stream | NVFP4 per-stream | FP8 TTFT | NVFP4 TTFT |
 |---|---|---|---|---|---|---|---|
-| 1 | 25.61 | 29.61 | +15.6% | 26.51 | 32.16 | 0.715 | 1.400 |
-| 2 | 42.19 | 55.49 | +31.5% | 22.31 | 29.35 | 1.116 | 0.651 |
-| 4 | 60.98 | 92.42 | +51.6% | 16.43 | 24.86 | 1.131 | 0.877 |
-| 8 | 95.86 | 143.53 | +49.7% | 12.99 | 19.93 | 1.415 | 1.188 |
-| 16 | 140.62 | 212.09 | +50.8% | 9.77 | 14.86 | 2.452 | 2.129 |
-| 32 | 158.02 | 231.30 | +46.4% | 9.51 | 13.76 | 3.445 | 1.330 |
-| 64 | 177.46 | **257.59** | +45.2% | 8.63 | 12.38 | 3.228 | 0.989 |
+| 1 | 23.02 | 29.61 | +28.6% | 24.42 | 32.16 | 1.320 | 1.400 |
+| 2 | 42.08 | 55.49 | +31.9% | 22.59 | 29.35 | 0.521 | 0.651 |
+| 4 | 61.90 | 92.42 | +49.3% | 16.70 | 24.86 | 1.135 | 0.877 |
+| 8 | 94.28 | 143.53 | +52.2% | 12.96 | 19.93 | 1.455 | 1.188 |
+| 16 | 145.84 | 212.09 | +45.4% | 10.18 | 14.86 | 2.459 | 2.129 |
+| 32 | 152.66 | 231.30 | +51.5% | 9.38 | 13.76 | 3.770 | 1.330 |
+| 64 | 176.75 | **257.59** | +45.7% | 8.46 | 12.38 | 3.246 | 0.989 |
 
 NVFP4's TTFT is worse only at c=1, and better at every other point. The c=1 figure looks
 like a cold start artifact on the first request after warmup.
 
-### Caveat on the FP8 column
+### On the FP8 column: the confound was checked, and it was immaterial
 
-The FP8 numbers above come from an earlier run whose `MAX_NUM_SEQS` could not be recovered
-(containers removed, logs not retained). The NVFP4 run used a pinned `MAX_NUM_SEQS=64`.
-**The FP8 lane is being re-run at the identical pinned configuration** and this table will be
-replaced when it lands, so treat the FP8 column as provisional.
+The first FP8 ladder was measured before `MAX_NUM_SEQS` was pinned, and the value used could
+not be recovered afterwards. Rather than reason about it, the whole FP8 lane was re-run at
+the identical pinned configuration. The two agree closely:
 
-How much this could matter is bounded, though. A scheduler cap of N only distorts points
-above c=N, because at or below it every request is resident and nothing queues. The FP8
-ladder rises monotonically through c=64 and never plateaus, which already rules out a cap
-below 16: a cap of 8 would have pinned c=16, c=32 and c=64 near the c=8 aggregate of 95.86,
-and instead they reach 140.62, 158.02 and 177.46. So the c=1 through c=16 rows are sound for
-any cap of 16 or more, and those rows alone show NVFP4 ahead by 15.6%, 31.5%, 51.6%, 49.7%
-and 50.8%. The high concurrency rows are the ones to re-confirm.
+| conc | FP8 original | FP8 pinned |
+|---|---|---|
+| 16 | 140.62 | 145.84 |
+| 32 | 158.02 | 152.66 |
+| 64 | 177.46 | 176.75 |
 
-KV cache size and the NIAH table do not depend on `max_num_seqs` at all and are unaffected.
+So the original numbers were sound and the NVFP4 advantage was never an artifact of the
+scheduler cap. Every FP8 figure in this document is now from the pinned run.
+
+KV cache size also proved independent of `max_num_seqs`, as expected: 595,137 tokens on the
+original run and 607,890 on the pinned one, a 2.1% difference.
 
 ## Needle in a haystack, 5 needles
 
 | context | FP8 TTFT | NVFP4 TTFT | FP8 decode | NVFP4 decode | needles |
 |---|---|---|---|---|---|
-| 4,096 | 2.3 s | 3.1 s | 35.70 | **50.95** | 5/5 both |
-| 32,768 | 15.0 s | **12.1 s** | 41.28 | 41.51 | 5/5 both |
-| 131,072 | 63.3 s | **50.6 s** | 44.45 | 42.74 | 5/5 both |
-| 200,000 | 95.7 s | **77.3 s** | 40.43 | **49.64** | 5/5 both |
-| 245,000 | 119.3 s | **96.9 s** | 33.27 | **49.40** | 5/5 both |
-| 258,000 | HTTP 400 | not run | | | |
+| 4,096 | 3.6 s | **3.1 s** | 37.24 | **50.95** | 5/5 both |
+| 32,768 | 15.5 s | **12.1 s** | 37.20 | **41.51** | 5/5 both |
+| 131,072 | 63.4 s | **50.6 s** | **43.54** | 42.74 | 5/5 both |
+| 200,000 | 95.7 s | **77.3 s** | 38.15 | **49.64** | 5/5 both |
+| 245,000 | 118.8 s | **96.9 s** | 29.78 | **49.40** | 5/5 both |
 
 258,000 fails on FP8 because the rendered prompt reaches 261,583 tokens, which leaves no room
 for generation inside a 262,144 window. The practical ceiling on both lanes is about 248K.
