@@ -130,12 +130,19 @@ like a cold start artifact on the first request after warmup.
 ### Caveat on the FP8 column
 
 The FP8 numbers above come from an earlier run whose `MAX_NUM_SEQS` could not be recovered
-(containers removed, logs not retained). The NVFP4 run used a pinned `MAX_NUM_SEQS=64`. The
-FP8 ladder rises smoothly to c=64, which rules out a low scheduler cap, and the deltas are
-far larger than a cap would explain, but **the FP8 lane is being re-run at the identical
-pinned configuration** and this table will be replaced when it lands. Treat the FP8 column
-as provisional. The KV cache and NIAH figures are unaffected, since neither depends on
-`max_num_seqs`.
+(containers removed, logs not retained). The NVFP4 run used a pinned `MAX_NUM_SEQS=64`.
+**The FP8 lane is being re-run at the identical pinned configuration** and this table will be
+replaced when it lands, so treat the FP8 column as provisional.
+
+How much this could matter is bounded, though. A scheduler cap of N only distorts points
+above c=N, because at or below it every request is resident and nothing queues. The FP8
+ladder rises monotonically through c=64 and never plateaus, which already rules out a cap
+below 16: a cap of 8 would have pinned c=16, c=32 and c=64 near the c=8 aggregate of 95.86,
+and instead they reach 140.62, 158.02 and 177.46. So the c=1 through c=16 rows are sound for
+any cap of 16 or more, and those rows alone show NVFP4 ahead by 15.6%, 31.5%, 51.6%, 49.7%
+and 50.8%. The high concurrency rows are the ones to re-confirm.
+
+KV cache size and the NIAH table do not depend on `max_num_seqs` at all and are unaffected.
 
 ## Needle in a haystack, 5 needles
 
