@@ -104,11 +104,47 @@ already reserved pool. This has **not** yet been separated from vLLM's own
 of magnitude). A relaunch at `GPU_UTIL=0.5` would settle which it is. Reported here as an
 observation, not a diagnosis.
 
-The MoE backend is selectable with `--moe-backend` (an `EngineArgs` field, `arg_utils.py:499`,
-registered at `:1600`). There is **no** `VLLM_FLASHINFER_MOE_BACKEND` environment variable.
-Candidates printed at boot: `FLASHINFER_TRTLLM`, `FLASHINFER_CUTEDSL`,
-`FLASHINFER_CUTEDSL_BATCHED`, `FLASHINFER_CUTLASS`, `VLLM_CUTLASS`, `MARLIN`, `HUMMING`,
-`EMULATION`.
+### The MoE backend is selectable, but there is no usable alternative on GB10
+
+`--moe-backend` is a real flag (an `EngineArgs` field, `arg_utils.py:499`, registered at
+`:1600`). There is **no** `VLLM_FLASHINFER_MOE_BACKEND` environment variable. Candidates
+printed at boot: `FLASHINFER_TRTLLM`, `FLASHINFER_CUTEDSL`, `FLASHINFER_CUTEDSL_BATCHED`,
+`FLASHINFER_CUTLASS`, `VLLM_CUTLASS`, `MARLIN`, `HUMMING`, `EMULATION`.
+
+Both plausible alternatives were tried on this hardware and both fail:
+
+`--moe-backend marlin` loads the NVFP4 experts (it warns "Your GPU does not have native
+support for FP4 computation ... Weight-only FP4 compression will be used leveraging the
+Marlin kernel"), then dies at engine init:
+
+```
+ValueError: moe_backend='marlin' is not supported for unquantized MoE.
+Expected one of ['triton', 'batched_triton', 'flashinfer_trtllm', 'flashinfer_cutlass', 'aiter'].
+```
+
+`--moe-backend flashinfer_trtllm` fails earlier:
+
+```
+ValueError: NvFp4 MoE backend 'FLASHINFER_TRTLLM' does not support the deployment
+configuration since kernel does not support current device cuda.
+```
+
+The reason is the mixed-precision checkpoint again. `--moe-backend` is a single global
+setting, and this model has **both** NVFP4 routed experts and unquantized MoE modules (the
+ones `ignore` excludes, `*.mlp.shared_expert.*` and `*.mlp.gate*`). The chosen backend has
+to be valid for both. Intersecting the NVFP4 candidate list with the unquantized MoE list
+leaves only `flashinfer_trtllm`, whose kernel does not support sm_121, and
+`flashinfer_cutlass`. So **`FLASHINFER_CUTLASS` is the only workable option**, and vLLM's
+automatic selection was already picking it.
+
+The practical consequence: the large pre-weight allocation above is **not** avoidable by
+changing the MoE backend on this hardware. If it is to be reduced, it has to be somewhere
+else. Testing whether it scales with `--gpu-memory-utilization` remains the open experiment.
+
+During the marlin attempt the pre-weight drop was smaller (111.7 to 47.7 GiB, against 111.7
+to 23.1 GiB for cutlass), which suggests backend choice does move the allocation. That run
+never reached KV allocation, so the difference cannot be converted into usable cache and is
+recorded here as an observation only, not as a benefit.
 
 ## Concurrency ladder
 
@@ -164,12 +200,26 @@ for generation inside a 262,144 window. The practical ceiling on both lanes is a
 multiuser / crypto / compliance), run from a separate host so the agent harness and its
 container images never compete for the sparks' unified memory.
 
-| model | resolved | score |
-|---|---|---|
-| Qwen3.8-Flash-Next-FP8 | 36/40 | 90.0% |
-| GLM-5.3-Flash NVFP4 (z.ai sampling server side) | 36/40 | 90.0% |
-| Qwen3.8-27B fast2 (RTX 5090) | 30/40 | 75.0% |
-| Qwen3.8-Flash-Next-NVFP4 | in progress | |
+| model | resolved | score | wall clock |
+|---|---|---|---|
+| **Qwen3.8-Flash-Next-NVFP4** | **36/40** | **90.0%** | **2h30m** |
+| Qwen3.8-Flash-Next-FP8 | 36/40 | 90.0% | 3h21m |
+| GLM-5.3-Flash NVFP4 (z.ai sampling server side) | 36/40 | 90.0% | ~13h |
+| Qwen3.8-27B fast2 (RTX 5090) | 30/40 | 75.0% | |
+
+NVFP4 ties FP8 exactly on score while finishing 25% faster, which tracks the throughput
+result rather than contradicting it.
+
+The tie is not an artifact of which instances happened to pass. The two lanes fail on
+different work: 2 instances failed in both, 2 only under NVFP4, 2 only under FP8. Both
+struggle on the same repository (flipt, Go), which accounts for 3 of NVFP4's 4 failures and
+2 of FP8's.
+
+One NVFP4 trajectory produced a degenerate prediction: the harness captured
+`cat: patch.txt: No such file or directory` as the patch, because the agent's final step
+read a file it never wrote. That instance could not resolve regardless of model quality.
+It is `flipt-0fd09def`, and **FP8 failed the same instance**, so it costs NVFP4 nothing in
+this comparison. Raw per instance results for both lanes are in `results/`.
 
 ## Environment
 
