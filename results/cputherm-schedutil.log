@@ -1,0 +1,27 @@
+host=dgx-spark-1 cores=20 governor=schedutil duration=180s
+idle_baseline_C=47
+t+000s hottest=47C cpu0=2025MHz load=12.81
+t+010s hottest=85C cpu0=2808MHz load=13.91
+t+020s hottest=87C cpu0=2808MHz load=14.85
+t+030s hottest=89C cpu0=2808MHz load=15.64
+t+040s hottest=90C cpu0=2808MHz load=16.31
+t+050s hottest=91C cpu0=2808MHz load=16.88
+t+060s hottest=91C cpu0=2808MHz load=17.36
+t+070s hottest=91C cpu0=2808MHz load=17.77
+t+080s hottest=91C cpu0=2808MHz load=18.11
+t+090s hottest=91C cpu0=2808MHz load=18.40
+t+100s hottest=91C cpu0=2808MHz load=18.65
+t+110s hottest=92C cpu0=2808MHz load=18.86
+t+120s hottest=92C cpu0=2808MHz load=19.03
+t+130s hottest=92C cpu0=2808MHz load=19.18
+t+140s hottest=92C cpu0=2808MHz load=19.31
+t+150s hottest=92C cpu0=2808MHz load=19.41
+t+160s hottest=92C cpu0=2808MHz load=19.51
+t+170s hottest=92C cpu0=2808MHz load=19.58
+peak_C=92
+cooldown_30s_C=56
+thermal_slowdown_counters:
+            HW Thermal Slowdown                        : Not Active
+        SW Thermal Slowdown                            : Not Active
+        SW Thermal Slowdown                            : 0 us
+        HW Thermal Slowdown                            : 0 us

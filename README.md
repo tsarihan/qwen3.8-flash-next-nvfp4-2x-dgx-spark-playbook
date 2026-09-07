@@ -299,6 +299,78 @@ engine flag is identical, which is what makes the comparison weights-only.
   stopped growing. During the transfer it released 84 GB and held `MemAvailable` at about
   115 GB, at 314 MB/s. Stop it before serving so it does not add noise.
 
+## Thermals and memory pressure on this chassis
+
+Measured while benchmarking, because both affect what the numbers mean.
+
+Cooling here is two Sparks side by side (deliberately not stacked, so neither breathes the
+other's exhaust), one 120 mm USB fan per unit at full speed, 20 C room, both on a switched
+outlet for remote power cycling.
+
+**Under sustained GPU load** (94% utilization, hours into a two node run): GPU 58 C and
+52 C, hottest board sensor 71 C and 68 C. The thermal slowdown counters are zero, lifetime,
+on both boxes:
+
+```
+SW Thermal Slowdown : 0 us
+HW Thermal Slowdown : 0 us
+```
+
+The counter that is *not* zero is power capping. So with this much airflow the GPU thermal
+path is not the limit and the clocks sit where the power cap puts them. Past the point where
+you are out of thermal slowdown entirely, more cooling cannot return clocks, because
+temperature was not what was holding them.
+
+**Linux does no thermal management on these boxes.** All seven thermal zones have exactly one
+trip point each, and nothing bound to any of them:
+
+```
+thermal_zone0..6   trips=1   cdevs=0
+trip_point_0_temp = 104C
+trip_point_0_type = critical
+```
+
+`Processor` cooling devices exist but sit at `cur_state 0` of `max_state 3`, unattached to any
+zone, so nothing drives them. There is no fan or pwm entry under hwmon and `nvidia-smi`
+reports `fan.speed` as `N/A`. The fan curve is firmware side and not exposed.
+
+**CPU temperature is regulated to a setpoint, not a function of clock.** Three runs, all 20
+cores loaded for 180 s, same fan and same 20 C ambient:
+
+| condition | clock | peak |
+|---|---|---|
+| `performance` governor | 2808 MHz | 92 C |
+| `schedutil` governor | 2808 MHz | 92 C |
+| `performance`, `scaling_max_freq` capped to 2.0 GHz | 2000 MHz | 92 C |
+
+Idle was 37 C, cooldown 30 s after load ended was 55 to 56 C in every case. Cutting the clock
+by 28% moved the peak by **zero**. The clock also sat at exactly `cpuinfo_max_freq` (2808 MHz)
+at 37 C and at 92 C alike, so nothing was being scaled back on the way up.
+
+That rules out both throttling and a clock/temperature relationship: the system takes the CPU
+to about 92 C under sustained load and holds it there, and given less heat to move it simply
+moves less. Practical consequence: **there is no OS side knob that lowers CPU temperature on
+this hardware.** Not the governor (an all core load is 100% utilization, so `schedutil` ramps
+to maximum exactly like `performance`), not a frequency cap, and the fans are not yours to
+control. 92 C under load is normal here; the only trip point is at 104 C.
+
+**Memory pressure shows up as CPU burn, not as swapping.** On GB10 the GPU, the CPU and the
+page cache share one pool. Under pressure:
+
+```
+pswpout           0            <- nothing ever swapped
+pgscan_direct     1,964,122    (node 1)    8,048,973 (node 2)
+pgsteal_direct    1,913,054               5,752,670
+/proc/pressure/memory total   11.8 s                33.0 s
+```
+
+That is direct reclaim: the kernel evicting page cache synchronously inside the allocating
+thread, scanning millions of pages. It is pure CPU work and produces no disk writes, which is
+why the swap counters stay at zero while load average climbs (about 25 with no user process
+running, during one recovery). `vm.swappiness` does not help, because it only governs
+anonymous pages; page cache eviction happens regardless. Watch `/proc/pressure/memory`, not
+`free`, and bound the cache at the source with `scripts/cache-warden.py`.
+
 ## Files
 
 ```
@@ -309,6 +381,7 @@ scripts/replay-bench.sh                  identical ladder + NIAH for either endp
 scripts/verify-nvfp4.py                  checkpoint vs HuggingFace LFS sha256
 scripts/memsample.sh                     MemAvailable curve tagged with engine log lines
 scripts/cache-warden.py                  bounds page cache during bulk transfers
+scripts/cputherm.sh                      CPU-bound thermal probe used for the table above
 results/                                 raw JSON and the two memory curves
 docs/JOURNEY.md                          what failed, in order, and why
 ```
