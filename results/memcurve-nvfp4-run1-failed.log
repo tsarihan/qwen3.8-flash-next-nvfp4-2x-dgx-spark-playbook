@@ -1,0 +1,119 @@
+T+0000s available=115.7GiB | 
+T+0002s available=115.6GiB | 
+T+0004s available=115.6GiB | 
+T+0006s available=115.6GiB | 
+T+0008s available=115.5GiB | 
+T+0010s available=115.2GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0012s available=115.0GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0014s available=114.9GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0016s available=114.8GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0018s available=114.2GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0020s available=115.4GiB | (APIServer pid=1) INFO 09-07 18:14:38 [model.py:1965] Using max model len 262144
+T+0023s available=114.5GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0025s available=114.7GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0027s available=114.5GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0029s available=115.0GiB | (APIServer pid=1) INFO 09-07 18:14:47 [vllm.py:1520] Cudagraph is disabled under eager mode
+T+0031s available=114.7GiB | (APIServer pid=1) INFO 09-07 18:14:47 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+T+0033s available=114.4GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0035s available=114.2GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0037s available=113.9GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0039s available=113.8GiB | (APIServer pid=1) [transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'mrope_section', 'mrope_interleaved'}
+T+0041s available=112.9GiB | (EngineCore pid=366) INFO 09-07 18:14:58 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=192.168.101.14, mq_connect
+T+0043s available=113.2GiB | (EngineCore pid=366) INFO 09-07 18:14:58 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=192.168.101.14, mq_connect
+T+0045s available=113.0GiB | (EngineCore pid=366) INFO 09-07 18:14:58 [multiproc_executor.py:150] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=192.168.101.14, mq_connect
+T+0047s available=112.5GiB | (Worker pid=438) INFO 09-07 18:15:04 [parallel_state.py:1638] world_size=2 rank=0 local_rank=0 distributed_init_method=tcp://192.168.101.14:25400 backend=nccl
+T+0049s available=112.6GiB | (Worker pid=438) INFO 09-07 18:15:04 [parallel_state.py:1638] world_size=2 rank=0 local_rank=0 distributed_init_method=tcp://192.168.101.14:25400 backend=nccl
+T+0051s available=111.7GiB | (Worker pid=438) WARNING 09-07 18:15:09 [symm_mem.py:67] SymmMemCommunicator: Device capability 12.1 not supported, communicator is not available.
+T+0053s available=70.6GiB | (Worker_TP0_EP0 pid=438) INFO 09-07 18:15:10 [nvfp4.py:291] Using 'FLASHINFER_CUTLASS' NvFp4 MoE backend out of potential backends: ['FLASHINFER_TRTLLM', 'FLASH
+T+0055s available=30.9GiB | (Worker_TP0_EP0 pid=438) INFO 09-07 18:15:12 [flash_attn.py:911] Using FlashAttention version 2
+T+0057s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   0% Completed | 0/206 [00:00<?, ?it/s]
+T+0059s available=23.0GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   0% Completed | 1/206 [00:03<10:30,  3.07s/it]
+T+0061s available=22.7GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   0% Completed | 1/206 [00:03<10:30,  3.07s/it]
+T+0063s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   2% Completed | 4/206 [00:06<04:19,  1.29s/it]
+T+0065s available=23.0GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   2% Completed | 4/206 [00:06<04:19,  1.29s/it]
+T+0067s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   2% Completed | 5/206 [00:09<06:16,  1.87s/it]
+T+0069s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   3% Completed | 7/206 [00:13<05:28,  1.65s/it]
+T+0071s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   4% Completed | 8/206 [00:13<04:08,  1.25s/it]
+T+0073s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   4% Completed | 9/206 [00:16<05:50,  1.78s/it]
+T+0075s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   5% Completed | 10/206 [00:19<07:04,  2.16s/it]
+T+0078s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   6% Completed | 12/206 [00:20<04:12,  1.30s/it]
+T+0080s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   6% Completed | 13/206 [00:23<05:49,  1.81s/it]
+T+0082s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   6% Completed | 13/206 [00:23<05:49,  1.81s/it]
+T+0084s available=23.5GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   8% Completed | 16/206 [00:27<04:08,  1.31s/it]
+T+0086s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   8% Completed | 16/206 [00:27<04:08,  1.31s/it]
+T+0088s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   8% Completed | 17/206 [00:30<05:28,  1.74s/it]
+T+0090s available=23.5GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:   9% Completed | 19/206 [00:33<04:57,  1.59s/it]
+T+0092s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  10% Completed | 20/206 [00:34<03:49,  1.23s/it]
+T+0094s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  10% Completed | 21/206 [00:36<05:17,  1.72s/it]
+T+0096s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  11% Completed | 22/206 [00:39<06:23,  2.08s/it]
+T+0098s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  12% Completed | 24/206 [00:40<03:44,  1.23s/it]
+T+0100s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  12% Completed | 25/206 [00:43<05:13,  1.73s/it]
+T+0102s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  12% Completed | 25/206 [00:43<05:13,  1.73s/it]
+T+0104s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  14% Completed | 28/206 [00:47<03:38,  1.23s/it]
+T+0106s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  14% Completed | 28/206 [00:47<03:38,  1.23s/it]
+T+0108s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  14% Completed | 29/206 [00:50<05:09,  1.75s/it]
+T+0110s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  15% Completed | 31/206 [00:53<04:46,  1.64s/it]
+T+0112s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  16% Completed | 32/206 [00:54<03:44,  1.29s/it]
+T+0114s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  16% Completed | 33/206 [00:57<05:06,  1.77s/it]
+T+0116s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  17% Completed | 34/206 [01:00<06:13,  2.17s/it]
+T+0118s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  17% Completed | 36/206 [01:01<03:34,  1.26s/it]
+T+0120s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  18% Completed | 37/206 [01:04<04:57,  1.76s/it]
+T+0122s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  18% Completed | 37/206 [01:04<04:57,  1.76s/it]
+T+0124s available=23.5GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  19% Completed | 40/206 [01:07<03:29,  1.26s/it]
+T+0126s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  19% Completed | 40/206 [01:07<03:29,  1.26s/it]
+T+0128s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  20% Completed | 41/206 [01:11<04:59,  1.81s/it]
+T+0130s available=23.5GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  21% Completed | 43/206 [01:14<04:24,  1.62s/it]
+T+0132s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  21% Completed | 44/206 [01:14<03:23,  1.26s/it]
+T+0134s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  22% Completed | 45/206 [01:17<04:14,  1.58s/it]
+T+0137s available=23.5GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  23% Completed | 48/206 [01:20<02:54,  1.11s/it]
+T+0139s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  24% Completed | 49/206 [01:22<03:52,  1.48s/it]
+T+0141s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  24% Completed | 49/206 [01:22<03:52,  1.48s/it]
+T+0143s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  25% Completed | 52/206 [01:25<02:41,  1.05s/it]
+T+0145s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  26% Completed | 53/206 [01:28<03:42,  1.45s/it]
+T+0147s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  26% Completed | 54/206 [01:30<04:26,  1.75s/it]
+T+0149s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  27% Completed | 56/206 [01:31<02:48,  1.12s/it]
+T+0151s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  28% Completed | 57/206 [01:34<04:15,  1.71s/it]
+T+0153s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  28% Completed | 57/206 [01:34<04:15,  1.71s/it]
+T+0155s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  29% Completed | 60/206 [01:38<02:53,  1.19s/it]
+T+0157s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  29% Completed | 60/206 [01:38<02:53,  1.19s/it]
+T+0159s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  30% Completed | 61/206 [01:41<04:10,  1.73s/it]
+T+0161s available=23.5GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  31% Completed | 63/206 [01:44<03:51,  1.62s/it]
+T+0163s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  31% Completed | 64/206 [01:45<02:57,  1.25s/it]
+T+0165s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  32% Completed | 65/206 [01:48<04:14,  1.81s/it]
+T+0167s available=23.0GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  32% Completed | 65/206 [01:48<04:14,  1.81s/it]
+T+0169s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  33% Completed | 68/206 [01:52<02:55,  1.27s/it]
+T+0171s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  33% Completed | 69/206 [01:55<04:00,  1.76s/it]
+T+0173s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  33% Completed | 69/206 [01:55<04:00,  1.76s/it]
+T+0175s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  35% Completed | 72/206 [01:58<02:46,  1.24s/it]
+T+0177s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  35% Completed | 72/206 [01:58<02:46,  1.24s/it]
+T+0179s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  35% Completed | 73/206 [02:01<03:55,  1.77s/it]
+T+0181s available=23.5GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  36% Completed | 75/206 [02:05<03:34,  1.64s/it]
+T+0183s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  37% Completed | 76/206 [02:05<02:45,  1.28s/it]
+T+0185s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  37% Completed | 77/206 [02:08<03:46,  1.76s/it]
+T+0187s available=23.5GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  38% Completed | 78/206 [02:11<04:31,  2.12s/it]
+T+0189s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  39% Completed | 80/206 [02:12<02:41,  1.28s/it]
+T+0191s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  39% Completed | 81/206 [02:15<03:39,  1.75s/it]
+T+0193s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  39% Completed | 81/206 [02:15<03:39,  1.75s/it]
+T+0196s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  41% Completed | 84/206 [02:19<02:31,  1.25s/it]
+T+0198s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  41% Completed | 84/206 [02:19<02:31,  1.25s/it]
+T+0200s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  41% Completed | 85/206 [02:21<03:23,  1.68s/it]
+T+0202s available=23.5GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  43% Completed | 88/206 [02:25<02:27,  1.25s/it]
+T+0204s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  43% Completed | 88/206 [02:25<02:27,  1.25s/it]
+T+0206s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  43% Completed | 89/206 [02:27<03:01,  1.55s/it]
+T+0208s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  45% Completed | 92/206 [02:31<02:01,  1.07s/it]
+T+0210s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  45% Completed | 93/206 [02:33<02:44,  1.46s/it]
+T+0212s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  46% Completed | 94/206 [02:35<03:16,  1.75s/it]
+T+0214s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  47% Completed | 96/206 [02:36<01:56,  1.06s/it]
+T+0216s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  47% Completed | 97/206 [02:39<02:39,  1.46s/it]
+T+0218s available=23.5GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  48% Completed | 99/206 [02:41<02:24,  1.35s/it]
+T+0220s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  49% Completed | 100/206 [02:42<01:52,  1.06s/it]
+T+0222s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  49% Completed | 101/206 [02:44<02:33,  1.46s/it]
+T+0224s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  50% Completed | 104/206 [02:47<01:46,  1.05s/it]
+T+0226s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  51% Completed | 105/206 [02:50<02:26,  1.45s/it]
+T+0228s available=23.0GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  51% Completed | 105/206 [02:50<02:26,  1.45s/it]
+T+0230s available=23.4GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  52% Completed | 108/206 [02:53<01:42,  1.05s/it]
+T+0232s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  53% Completed | 109/206 [02:55<02:21,  1.46s/it]
+T+0234s available=23.3GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  53% Completed | 110/206 [02:58<02:49,  1.76s/it]
+T+0236s available=23.2GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  54% Completed | 112/206 [02:59<01:39,  1.06s/it]
+T+0238s available=23.1GiB | (Worker_TP0_EP0 pid=438) Loading safetensors checkpoint shards:  55% Completed | 113/206 [03:01<02:15,  1.46s/it]
+T+0240s available=26.8GiB | Error response from daemon: can not get logs from container which is dead or marked for removal

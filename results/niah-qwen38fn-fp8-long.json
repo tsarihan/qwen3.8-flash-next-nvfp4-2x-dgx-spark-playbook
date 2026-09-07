@@ -1,0 +1,46 @@
+{
+  "tag": "run",
+  "model": "qwen3.8-flash-next-fp8",
+  "base_url": "http://localhost:8891/v1",
+  "needles": 5,
+  "results": [
+    {
+      "target": 200000,
+      "prompt_tokens": 202817,
+      "ttft_s": 95.676,
+      "prefill_tps": 2119.8,
+      "completion_tokens": 545,
+      "decode_tps": 40.43,
+      "total_s": 109.16,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need respond to user. User pasted huge repetitive text with inserted IMPORTANT FACTs:\n1. \"IMPORTANT FACT: the vault authorization code is ARGON-SEVEN-FOUR-ZERO. Remember it.\"\n2. \"IMPORTANT FACT: the emergency bypass phrase is TANGERINE-MERIDIAN-19. Remember it.\"\n3. \"IMPORTANT FACT: the cold stora"
+    },
+    {
+      "target": 245000,
+      "prompt_tokens": 248418,
+      "ttft_s": 119.28,
+      "prefill_tps": 2082.6,
+      "completion_tokens": 1197,
+      "decode_tps": 33.27,
+      "total_s": 155.26,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer user's request. User provided huge repetitive maintenance log plus embedded IMPORTANT FACTs. Then final asks: [session ...] Question: Several IMPORTANT FACTs were stated above. List every one of them, each on its own line, in the exact form '<label>: <value>'. Output only those lines,"
+    }
+  ]
+}

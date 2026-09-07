@@ -1,0 +1,16 @@
+(APIServer pid=1) INFO 09-07 18:23:04 [model.py:1965] Using max model len 262144
+(APIServer pid=1) INFO 09-07 18:23:13 [model.py:1965] Using max model len 262144
+(APIServer pid=1) WARNING 09-07 18:23:13 [modelopt.py:1011] Detected ModelOpt NVFP4 checkpoint (quant_algo=NVFP4). Please note that the format is experimental and could change in future.
+(APIServer pid=1) INFO 09-07 18:23:13 [vllm.py:1520] Cudagraph is disabled under eager mode
+(Worker_TP0_EP0 pid=440) INFO 09-07 18:23:32 [nvfp4.py:291] Using 'FLASHINFER_CUTLASS' NvFp4 MoE backend out of potential backends: ['FLASHINFER_TRTLLM', 'FLASHINFER_CUTEDSL', 'FLASHINFER_CUTEDSL_BATCHED', 'FLASHINFER_CUTLASS', 'VLLM_CUTLASS', 'MARLIN', 'HUMMING', 'EMULATION'].
+(Worker_TP0_EP0 pid=440) INFO 09-07 18:23:33 [flash_attn.py:911] Using FlashAttention version 2
+(Worker_TP0_EP0 pid=440) WARNING 09-07 18:31:52 [modelopt.py:1011] Detected ModelOpt NVFP4 checkpoint (quant_algo=NVFP4). Please note that the format is experimental and could change in future.
+(Worker_TP0_EP0 pid=440) INFO 09-07 18:31:52 [vllm.py:1520] Cudagraph is disabled under eager mode
+(Worker_TP0_EP0 pid=440) INFO 09-07 18:32:59 [model_runner.py:407] Model loading took 64.06 GiB memory and 567.409224 seconds
+(Worker_TP0_EP0 pid=440) INFO 09-07 18:32:59 [interface.py:915] Setting attention block size to 1600 tokens to ensure that attention page size is >= mamba page size.
+(Worker_TP0_EP0 pid=440) INFO 09-07 18:32:59 [interface.py:939] Padding mamba page size by 0.25% to ensure that mamba page size and attention page size are exactly equal.
+(EngineCore pid=368) INFO 09-07 18:33:54 [kv_cache_utils.py:2258] GPU KV cache size: 2,228,932 tokens, Maximum concurrency for 262,144 tokens per request: 8.50x
+(EngineCore pid=368) INFO 09-07 18:34:58 [core.py:354] init engine (profile, create kv cache, warmup model) took 118.96 s
+(EngineCore pid=368) INFO 09-07 18:35:04 [vllm.py:1520] Cudagraph is disabled under eager mode
+(APIServer pid=1) INFO:     Waiting for application startup.
+(APIServer pid=1) INFO:     Application startup complete.

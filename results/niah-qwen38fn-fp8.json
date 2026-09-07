@@ -1,0 +1,70 @@
+{
+  "tag": "run",
+  "model": "qwen3.8-flash-next-fp8",
+  "base_url": "http://localhost:8891/v1",
+  "needles": 5,
+  "results": [
+    {
+      "target": 4096,
+      "prompt_tokens": 4316,
+      "ttft_s": 2.255,
+      "prefill_tps": 1914.4,
+      "completion_tokens": 945,
+      "decode_tps": 35.7,
+      "total_s": 28.72,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer user's request. User provided a long repetitive text with embedded IMPORTANT FACTs and a final question: \"Several IMPORTANT FACTs were stated above. List every one of them, each on its own line, in the exact form '<label>: <value>'. Output only those lines, nothing else.\"\n\nNeed extrac"
+    },
+    {
+      "target": 32768,
+      "prompt_tokens": 33371,
+      "ttft_s": 15.04,
+      "prefill_tps": 2218.8,
+      "completion_tokens": 424,
+      "decode_tps": 41.28,
+      "total_s": 25.31,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer user's request. Need analyze hidden? User gave huge repetitive maintenance log with embedded IMPORTANT FACTs:\n1. vault authorization code is ARGON-SEVEN-FOUR-ZERO. Remember it.\n2. emergency bypass phrase is TANGERINE-MERIDIAN-19. Remember it.\n3. cold storage locker id is LOCKER-QX-882"
+    },
+    {
+      "target": 131072,
+      "prompt_tokens": 132971,
+      "ttft_s": 63.334,
+      "prefill_tps": 2099.5,
+      "completion_tokens": 424,
+      "decode_tps": 44.45,
+      "total_s": 72.87,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer user's request. Need analyze user's massive prompt. It contains repeated maintenance log and IMPORTANT FACT lines inserted: \n- IMPORTANT FACT: the vault authorization code is ARGON-SEVEN-FOUR-ZERO. Remember it.\n- IMPORTANT FACT: the emergency bypass phrase is TANGERINE-MERIDIAN-19. Re"
+    },
+    {
+      "target": 258000,
+      "prompt_tokens": 261583,
+      "error": "HTTPError: HTTP Error 400: Bad Request"
+    }
+  ]
+}

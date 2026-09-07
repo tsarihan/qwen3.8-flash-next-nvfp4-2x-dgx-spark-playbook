@@ -1,0 +1,14 @@
+This repository contains original scripts, measurements and documentation.
+
+It does NOT redistribute any upstream source. `patches/patch_ple.py` is a small script that
+edits a local copy of a file extracted from the vLLM container at run time; the vLLM source
+itself is not included here.
+
+Upstream projects referenced:
+  vLLM                  Apache-2.0   https://github.com/vllm-project/vllm
+  Qwen3.8-Flash-Next    see model card on HuggingFace (Qwen)
+  Qwen3.8-Flash-Next-NVFP4  see model card on HuggingFace (RadixArk), quantized with
+                        NVIDIA TensorRT Model Optimizer (nvidia-modelopt 0.46.0)
+
+Model weights are not redistributed. Benchmark numbers were measured on the author's own
+hardware and are reported as measured, including the cases that failed.

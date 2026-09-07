@@ -1,0 +1,67 @@
+{
+  "tag": "qwen38fn-fp8",
+  "model": "qwen3.8-flash-next-fp8",
+  "max_tokens": 512,
+  "rows": [
+    {
+      "concurrency": 1,
+      "success": 1,
+      "failed": 0,
+      "errors": [],
+      "wall_s": 20.71,
+      "ttft_mean_s": 0.976,
+      "ttft_p50_s": 0.976,
+      "ttft_max_s": 0.976,
+      "out_tokens_total": 512,
+      "out_tokens_mean": 512.0,
+      "prompt_tokens_mean": 130.0,
+      "per_stream_decode_tps": 25.9,
+      "aggregate_tps": 24.73
+    },
+    {
+      "concurrency": 2,
+      "success": 2,
+      "failed": 0,
+      "errors": [],
+      "wall_s": 25.89,
+      "ttft_mean_s": 0.552,
+      "ttft_p50_s": 0.552,
+      "ttft_max_s": 0.783,
+      "out_tokens_total": 1024,
+      "out_tokens_mean": 512.0,
+      "prompt_tokens_mean": 130.0,
+      "per_stream_decode_tps": 21.27,
+      "aggregate_tps": 39.55
+    },
+    {
+      "concurrency": 4,
+      "success": 4,
+      "failed": 0,
+      "errors": [],
+      "wall_s": 30.11,
+      "ttft_mean_s": 0.752,
+      "ttft_p50_s": 0.82,
+      "ttft_max_s": 0.913,
+      "out_tokens_total": 2048,
+      "out_tokens_mean": 512.0,
+      "prompt_tokens_mean": 130.0,
+      "per_stream_decode_tps": 18.03,
+      "aggregate_tps": 68.02
+    },
+    {
+      "concurrency": 8,
+      "success": 8,
+      "failed": 0,
+      "errors": [],
+      "wall_s": 42.39,
+      "ttft_mean_s": 1.278,
+      "ttft_p50_s": 1.416,
+      "ttft_max_s": 1.418,
+      "out_tokens_total": 4096,
+      "out_tokens_mean": 512.0,
+      "prompt_tokens_mean": 130.0,
+      "per_stream_decode_tps": 13.27,
+      "aggregate_tps": 96.62
+    }
+  ]
+}
