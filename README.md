@@ -517,8 +517,16 @@ MAX_NUM_SEQS=16 YARN=1 YARN_FACTOR=4.0 MAX_MODEL_LEN=1000000 \
 GPU_UTIL=0.85 KV_DTYPE=bfloat16 SPEC=mtp MTP_K=1 MTP_FIX=1
 ```
 
-1M window, 2,520,930 tokens of KV, 31.44 tok/s single stream, 5/5 needle recall verified to
-912,065 tokens, vision working. Raise `MAX_NUM_SEQS` to 64 only if serving concurrent agents.
+1M window, 2,520,930 tokens of KV, 31.44 tok/s single stream, vision working. Raise
+`MAX_NUM_SEQS` to 64 only if serving concurrent agents.
+
+Needle recall on this exact config was checked at 4K and 131K (5/5 at both). Depth was
+checked separately on the same NVIDIA 1M build before the matrix started, at
+`max_num_seqs=16` without MTP: 5/5 at 132,970, at 248,418, and at 912,065 tokens, the last
+of which is past the 800K point where an agent would normally compact. Those two runs
+differ in the MTP setting, so read them as two facts rather than one: the recommended
+config retrieves cleanly at the depths measured, and the 1M YaRN window on this checkpoint
+retrieves cleanly to 912K.
 
 ## Thermals and memory pressure on this chassis
 
