@@ -1,0 +1,46 @@
+{
+  "tag": "streams64",
+  "model": "qwen3.8-flash-next-nvfp4",
+  "base_url": "http://192.168.8.10:8892/v1",
+  "needles": 5,
+  "results": [
+    {
+      "target": 4096,
+      "prompt_tokens": 4313,
+      "ttft_s": 2.41,
+      "prefill_tps": 1789.3,
+      "completion_tokens": 507,
+      "decode_tps": 38.78,
+      "total_s": 15.48,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer user's request. Need parse IMPORTANT FACTs from noisy text. They ask: Several IMPORTANT FACTS were stated above. List every one of them, each on its own line, exact form '<label>: <value>'. Output only those lines.\n\nWe need extract labels and values. Text includes:\n- vault authorizati"
+    },
+    {
+      "target": 131072,
+      "prompt_tokens": 132969,
+      "ttft_s": 54.522,
+      "prefill_tps": 2438.8,
+      "completion_tokens": 1977,
+      "decode_tps": 36.25,
+      "total_s": 109.07,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer user's request. User provided huge repeated text with embedded IMPORTANT FACT: various labels/values. Need list every one of them, each on own line, exact form '<label>: <value>'. Output only those lines, nothing else.\n\nNeed identify all IMPORTANT FACTs in prompt. Let's scan:\n\nFirst: "
+    }
+  ]
+}

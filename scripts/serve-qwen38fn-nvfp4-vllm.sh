@@ -33,11 +33,42 @@ SPEC="${SPEC:-mtp}"                         # mtp | off
 MTP_K="${MTP_K:-3}"                         # recipe value
 EP="${EP:-1}"                               # --enable-expert-parallel
 PLE_OFFLOAD="${PLE_OFFLOAD:-0}"             # measured both ways: unified memory != HBM
-TOOL_PARSER="${TOOL_PARSER:-qwen3_xml}"     # recipe says qwen3_xml, Qwen repo says qwen3_coder
+TOOL_PARSER="${TOOL_PARSER:-qwen3_xml}"
+MOE_BACKEND="${MOE_BACKEND:-auto}"
+YARN="${YARN:-0}"                       # 1 enables YaRN rope scaling for >native context
+YARN_FACTOR="${YARN_FACTOR:-4.0}"       # 262144 * 4 = 1048576
+NATIVE_LEN="${NATIVE_LEN:-262144}"      # model native window, the YaRN baseline
+YARN_CFG="${YARN_CFG:-$HOME/patches/qwen38fn-nvfp4-config-yarn.json}"  # per-checkpoint patched config
+MTP_FIX="${MTP_FIX:-0}"                 # 1 mounts the ported vLLM PR 55513 (block FP8 MTP)
+QSA_FP8="${QSA_FP8:-0}"                 # 1 widens the QSA kv-dtype gate to allow fp8 (EXPERIMENTAL)
+GEN_TEMP="${GEN_TEMP:-1.0}"             # Qwen model card, thinking mode
+GEN_TOP_P="${GEN_TOP_P:-0.95}"
+GEN_TOP_K="${GEN_TOP_K:-20}"
+      # auto lets vLLM pick (FLASHINFER_CUTLASS here);
+                                        # set e.g. marlin to test a different NVFP4 MoE lane
+     # recipe says qwen3_xml, Qwen repo says qwen3_coder
 
 SPEC_ARGS=""
 [ "$SPEC" = "mtp" ] && SPEC_ARGS="--speculative-config '{\"method\":\"mtp\",\"num_speculative_tokens\":${MTP_K}}'"
 EP_ARG=""; [ "$EP" = "1" ] && EP_ARG="--enable-expert-parallel"
+MOE_ARG=""; [ "$MOE_BACKEND" != "auto" ] && MOE_ARG="--moe-backend $MOE_BACKEND"
+GEN_ARG="--override-generation-config '{\"temperature\":${GEN_TEMP},\"top_p\":${GEN_TOP_P},\"top_k\":${GEN_TOP_K}}'"
+CFG_MOUNT=""
+MTP_MOUNT=""
+QSA_MOUNT=""
+[ "$QSA_FP8" = "1" ] && QSA_MOUNT="-v $HOME/patches/qsa.py:/usr/local/lib/python3.12/dist-packages/vllm/models/qwen3_8_flash_next/nvidia/qsa.py:ro"
+V=/usr/local/lib/python3.12/dist-packages/vllm
+[ "$MTP_FIX" = "1" ] && MTP_MOUNT="-v $HOME/patches/modelopt.py:$V/model_executor/layers/quantization/modelopt.py:ro -v $HOME/patches/mtp.py:$V/models/qwen3_8_flash_next/nvidia/mtp.py:ro"
+# YaRN needs BOTH: a config.json whose text_config.rope_parameters says yarn (the
+# --hf-overrides route does not survive this build, the mm path re-reads the raw
+# config), and a transformers fix, because modeling_rope_utils reads
+# self.max_position_embeddings which lives on text_config for this mm wrapper config.
+[ "$YARN" = "1" ] && CFG_MOUNT="-v $YARN_CFG:/model/config.json:ro -v $HOME/patches/modeling_rope_utils.py:/usr/local/lib/python3.12/dist-packages/transformers/modeling_rope_utils.py:ro"
+ROPE_ARG=""
+# This model uses transformers 5.x rope_parameters (not rope_scaling) and is mRoPE, so the
+# override must live under text_config and preserve mrope_section / mrope_interleaved /
+# partial_rotary_factor. vLLM here takes it via --hf-overrides; --rope-scaling does not exist.
+[ "$YARN" = "1" ] && ROPE_ARG="--hf-overrides '{\"text_config\":{\"rope_parameters\":{\"rope_type\":\"yarn\",\"factor\":${YARN_FACTOR},\"original_max_position_embeddings\":${NATIVE_LEN},\"mrope_interleaved\":true,\"mrope_section\":[11,11,10],\"partial_rotary_factor\":0.25,\"rope_theta\":10000000}}}'"
 HEADLESS=""; [ "$NODE_RANK" = "1" ] && HEADLESS="--headless"
 case "$NODE_RANK" in
   0) HOST_IP=192.168.101.14 ;;
@@ -61,6 +92,7 @@ CMD="vllm serve /model \
   --distributed-executor-backend mp \
   --nnodes 2 --node-rank $NODE_RANK \
   --master-addr $MASTER_ADDR --master-port $MASTER_PORT \
+  $MOE_ARG $ROPE_ARG $GEN_ARG \
   $HEADLESS $SPEC_ARGS"
 
 docker run -d --name "$NAME" --entrypoint bash \
@@ -69,10 +101,13 @@ docker run -d --name "$NAME" --entrypoint bash \
   --device /dev/infiniband:/dev/infiniband \
   -v "$MODEL_DIR":/model:ro \
   -v "$HOME/patches/ple_layer.py":/usr/local/lib/python3.12/dist-packages/vllm/models/qwen3_8_flash_next/nvidia/ple_layer.py:ro \
+  $CFG_MOUNT $MTP_MOUNT $QSA_MOUNT \
   -e VLLM_HOST_IP=$HOST_IP \
   -e VLLM_PLE_CPU_OFFLOAD=$PLE_OFFLOAD \
+  -e VLLM_ALLOW_LONG_MAX_MODEL_LEN=$YARN \
   -e HF_HUB_OFFLINE=1 -e TRANSFORMERS_OFFLINE=1 \
   -e VLLM_QWEN38FN_PLE_FP8=1 \
+  -e QSA_FP8_KV=$QSA_FP8 \
   -e VLLM_ENGINE_READY_TIMEOUT_S=3600 \
   -e PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
   -e TORCH_CUDA_ARCH_LIST=12.1a -e FLASHINFER_CUDA_ARCH_LIST=12.1a \
@@ -87,5 +122,5 @@ docker run -d --name "$NAME" --entrypoint bash \
   -e TORCH_NCCL_ASYNC_ERROR_HANDLING=1 \
   "$IMAGE" -c "$CMD"
 
-echo "[$NAME] rank=$NODE_RANK tp=2 ep=$EP kv=$KV_DTYPE spec=$SPEC/$MTP_K seqs=$MAX_NUM_SEQS ple=$PLE_OFFLOAD parser=$TOOL_PARSER launched."
+echo "[$NAME] rank=$NODE_RANK tp=2 ep=$EP moe=$MOE_BACKEND mtpfix=$MTP_FIX yarn=$YARN/$YARN_FACTOR kv=$KV_DTYPE spec=$SPEC/$MTP_K seqs=$MAX_NUM_SEQS ple=$PLE_OFFLOAD parser=$TOOL_PARSER launched."
 [ "$NODE_RANK" = "0" ] && echo "Health: http://0.0.0.0:${PORT}/health   (poll /health, NOT /v1/models)"

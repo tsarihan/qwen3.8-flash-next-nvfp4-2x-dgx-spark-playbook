@@ -1,0 +1,46 @@
+{
+  "tag": "native262k",
+  "model": "qwen3.8-flash-next-nvfp4",
+  "base_url": "http://192.168.8.10:8892/v1",
+  "needles": 5,
+  "results": [
+    {
+      "target": 4096,
+      "prompt_tokens": 4315,
+      "ttft_s": 2.178,
+      "prefill_tps": 1981.5,
+      "completion_tokens": 352,
+      "decode_tps": 40.02,
+      "total_s": 10.97,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer user's request. Need analyze in English because user asks English. User provided a long repetitive text with several IMPORTANT FACT lines embedded:\n1 vault authorization code is ARGON-SEVEN-FOUR-ZERO.\n2 emergency bypass phrase is TANGERINE-MERIDIAN-19.\n3 cold storage locker id is LOCK"
+    },
+    {
+      "target": 131072,
+      "prompt_tokens": 132969,
+      "ttft_s": 49.7,
+      "prefill_tps": 2675.5,
+      "completion_tokens": 396,
+      "decode_tps": 40.28,
+      "total_s": 59.53,
+      "needles_found": "5/5",
+      "all_found": true,
+      "per_needle": {
+        "vault authorization code@0.10": true,
+        "emergency bypass phrase@0.30": true,
+        "cold storage locker id@0.50": true,
+        "relay handshake token@0.70": true,
+        "archive retrieval key@0.90": true
+      },
+      "answer_head": "We need answer user's request. User provided huge repeated text, interspersed IMPORTANT FACTs: vault authorization code ARGON-SEVEN-FOUR-ZERO; emergency bypass phrase TANGERINE-MERIDIAN-19; cold storage locker id LOCKER-QX-8823; relay handshake token ZEPHYR-BLUE-3051; archive retrieval key OBSIDIAN-"
+    }
+  ]
+}
