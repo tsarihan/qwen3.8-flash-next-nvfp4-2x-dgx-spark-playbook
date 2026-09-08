@@ -528,6 +528,32 @@ differ in the MTP setting, so read them as two facts rather than one: the recomm
 config retrieves cleanly at the depths measured, and the 1M YaRN window on this checkpoint
 retrieves cleanly to 912K.
 
+## Does the 1M window cost you any quality? SWE-bench Pro says no
+
+The recommended config was put through 40 SWE-bench Pro instances end to end: the agent ran
+on a third machine, talked to a litellm proxy, and litellm forwarded to the Spark pair. That
+exercises the proxy hop and real long-context tool use, not just a benchmark harness.
+
+| build | window | MTP | resolved |
+|---|---|---|---|
+| qwen3.8-flash-next FP8 (RadixArk) | 262K | off | 36/40 (90.0%) |
+| qwen3.8-flash-next NVFP4 (RadixArk) | 262K | off | 36/40 (90.0%) |
+| **qwen3.8-flash-next NVFP4 (NVIDIA)** | **1M YaRN** | **k=1** | **38/40 (95.0%)** |
+
+All 40 trajectories ended `Submitted` with a non-empty patch; median patch 10,977 bytes,
+range 2,197-34,967. The two failures are a strict subset of the earlier run's four: the same
+two `flipt-io/flipt` instances fail, two that the RadixArk build failed now pass, and nothing
+that passed before regressed.
+
+**Read that as "no measurable quality cost", not as "+5 points."** Two instances out of 40 is
+inside run-to-run noise for a stochastic agent, and three variables moved at once between
+those rows: the checkpoint, the window, and MTP. What the run does establish is the thing
+worth establishing before you serve this config for real work: stretching to a 1M window with
+YaRN did not degrade agentic coding, and nothing in the proxy hop truncates or mangles long
+context on the way through.
+
+Raw per-instance results are in `results/swe-eval-qwen38fn-nvfp4-nvidia-1m-mtp1.json`.
+
 ## Thermals and memory pressure on this chassis
 
 Measured while benchmarking, because both affect what the numbers mean.
