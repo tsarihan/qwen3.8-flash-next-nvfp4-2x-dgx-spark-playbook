@@ -385,6 +385,71 @@ Replace gpu_memory_utilization config with --kv-cache-memory=44161560064 (41.13 
 
 That names the exact byte figure for the largest KV pool the box will give you.
 
+## Which NVFP4 checkpoint: NVIDIA's, not the community one
+
+This playbook originally used `RadixArk/Qwen3.8-Flash-Next-NVFP4` because it was the first
+NVFP4 build available. It has since been replaced with
+**`nvidia/Qwen3.8-Flash-Next-NVFP4`**, and the reasoning is worth recording because it is
+mostly not about speed.
+
+**Provenance.** A quantization is a full reprocessing of every weight, so it is an
+opportunity to alter behaviour, and altered weights cannot practically be audited.
+Benchmarks do not catch trigger-conditioned behaviour: a checkpoint can score normally on
+nine benchmarks and still carry something that surfaces only on specific inputs. Take the
+model author's own build first, and if they do not publish the quant format you need, a
+vendor build (NVIDIA, Red Hat). Qwen do not publish NVFP4, so NVIDIA is the right source.
+
+**What else differed, measured rather than assumed:**
+
+| | RadixArk | NVIDIA |
+|---|---|---|
+| Calibration | cnn_dailymail only, activations captured from live SGLang serving | cnn_dailymail **plus** Nemotron-Post-Training-v2 |
+| Published accuracy | none | 9 benchmarks against the FP8 baseline |
+| Documented runtime | SGLang only | vLLM |
+| Files | 419, 135.3 GiB | 25, 123.6 GiB (one 50 GiB PLE/MTP blob) |
+| Load time per node | 534 s | **447 s** |
+| Weights per node | 64.43 GiB | **61.93 GiB** |
+| KV pool at util 0.85, 1M window | 2,422,600 tok | **2,916,600 tok** |
+| Headroom after load | 3.9 GiB | **6.0 GiB** |
+| MTP speculative decoding | works | blocked, see below |
+
+The calibration difference is the one that should matter for agentic work: cnn_dailymail is
+news prose, so scales derived from it alone are calibrated on text that looks nothing like
+code or tool calling. Nemotron-Post-Training-v2 is multi-turn instruction data.
+
+NVIDIA's own published comparison against the FP8 baseline shows parity, NVFP4 ahead on five
+and behind on four, all by small margins: GPQA 92.0/91.5, HLE 34.7/35.4, tau2-Telecom
+90.8/90.1, MMMU Pro 77.1/78.3, SciCode 16.3/18.8, AA-LCR 71.9/74.1, IFBench 80.5/81.0,
+Omniscience 28.1/27.6, Terminal-Bench 2.1 83.3/82.9. That independently corroborates the
+36/40 vs 36/40 SWE result measured here on the RadixArk build.
+
+### The PLE gate is not a RadixArk defect
+
+Both builds ship FP8 PLE embedding tables with a single scale tensor, and vLLM's
+`isinstance(quant_config, Fp8Config)` check rejects both. NVIDIA's own model card documents
+this: serving requires vLLM commit `d4d703c` or later. Our image is older, which is why the
+patch in this repository is needed; it reimplements what that commit does.
+
+### MTP: NVIDIA's build cannot speculate on an older vLLM
+
+NVIDIA block-quantized the MTP draft layer to FP8 (1,536 `weight_scale_inv` tensors in
+`model-fp8-mtp-ple.safetensors`), and declares it in `quantized_layers` as
+`mtp.layers.0.mlp.experts: {"quant_algo": "FP8_PB_WO", "group_size": 128}` under
+`quant_algo: MIXED_PRECISION`. Loading fails with:
+
+```
+AttributeError: Layer mtp.layers.48.mlp.experts has no parameter 'w2_weight_scale_inv'
+```
+
+RadixArk excluded `mtp.*` from quantization entirely, leaving it bf16, which is why theirs
+loaded. NVIDIA's card names the fix: vLLM PR #55513, unmerged at time of writing. That PR
+adds block-FP8 MoE support to the MIXED_PRECISION path. It is ported to this build in
+`patches/` and gated behind `MTP_FIX=1`.
+
+Worth noting before treating this as a loss: on this hardware the NVIDIA build **without**
+MTP reached 218.11 tok/s aggregate at c=16, against the RadixArk build **with** MTP=3 at
+212.09. At higher concurrency batching dominates and speculation contributes little.
+
 ## Thermals and memory pressure on this chassis
 
 Measured while benchmarking, because both affect what the numbers mean.
