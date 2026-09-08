@@ -299,6 +299,92 @@ engine flag is identical, which is what makes the comparison weights-only.
   stopped growing. During the transfer it released 84 GB and held `MemAvailable` at about
   115 GB, at 314 MB/s. Stop it before serving so it does not add noise.
 
+## Getting past 262K: YaRN to 1M needs two patches, not the documented flag
+
+The Qwen model card documents two ways to enable YaRN. On this build the command line one
+does not work, and the config file one hits a bug in transformers. Both are worth knowing
+before you spend an evening on it.
+
+**The documented flag silently reverts.** This is the card's recipe:
+
+```
+VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 vllm serve ... \
+  --hf-overrides '{"text_config": {"rope_parameters": {... "rope_type": "yarn", "factor": 4.0 ...}}}' \
+  --max-model-len 1000000
+```
+
+The override is accepted and reaches the engine (it shows up in `non-default args`), and
+`max_model_len` resolves to 1,000,000. Then the multimodal processor loads, a second
+`ModelConfig` is built that re-reads the raw config, and the window drops back to 262,144:
+
+```
+INFO [model.py:1965] Using max model len 1000000
+[ERROR] `min_frames` is part of Qwen3VLVideoProcessorInitKwargs ...
+INFO [model.py:1965] Using max model len 262144
+```
+
+No error is raised. The only symptom is those two lines, about twelve seconds apart, and
+transformers continuing to log `rope_type='default'`. Setting
+`VLLM_ALLOW_LONG_MAX_MODEL_LEN=1` does not change it.
+
+**Patching config.json works, and then exposes a transformers bug.** Writing the card's
+rope block into `text_config.rope_parameters` and bind mounting it over the model directory
+gets `rope_type='yarn'` recognised, and then the engine dies:
+
+```
+AttributeError: 'Qwen4ExpConfig' object has no attribute 'max_position_embeddings'
+```
+
+The cause is in `transformers/modeling_rope_utils.py`. On any non-default rope type it does:
+
+```python
+self.rope_parameters.setdefault("original_max_position_embeddings", self.max_position_embeddings)
+```
+
+`setdefault` evaluates its default eagerly, so `self.max_position_embeddings` is read even
+though the key is already present in the config. On this multimodal wrapper config that
+attribute lives on `text_config`, not at the top level, so it raises. There are five such
+accesses in that file: one in `standardize_rope_params` and the rest in
+`_validate_yarn_rope_parameters` and its error path. Fixing only the first moves the failure
+to line 928.
+
+This is an upstream bug and it affects any multimodal model using YaRN, not just this one.
+Adding `max_position_embeddings` or `original_max_position_embeddings` to config.json at any
+level does **not** work around it: those keys are not stored as attributes on this config class.
+
+**What works.** `patches/mk_yarn_config.py` writes the patched config.json, and
+`patches/patch_rope_step1.py` plus `patches/patch_rope_step2.py` replace the five accesses
+with a helper that falls back to `text_config`. Both are bind mounted over the image, and the
+whole thing is behind `YARN=1` so the default path is untouched.
+
+Result at `GPU_UTIL=0.90`, `MAX_NUM_SEQS=16`, factor 4.0:
+
+```
+Using max model len 1000000        (capability resolves to 1,048,576 = 262,144 x 4)
+Model loading took 64.43 GiB       (vs 64.06 GiB native, so YaRN costs about 0.37 GiB)
+GPU KV cache size: 2,852,941 tokens, Maximum concurrency for 1,000,000 tokens per request: 2.85x
+```
+
+**Whether you should.** Qwen's own guidance is not to leave this on: "All the notable
+open-source frameworks implement static YaRN, which means the scaling factor remains constant
+regardless of input length, potentially impacting performance on shorter texts. We advise
+modifying the rope_parameters configuration only when processing long contexts is required."
+Factor 4.0 applies to a 2K agent turn exactly as it does to an 800K document. If long context
+is occasional, serve native and stand a second instance up when needed, or lower the factor to
+match actual need (factor 2.0 for about 524K).
+
+**Sizing tip.** Rather than guessing at `--gpu-memory-utilization`, read what the engine tells
+you at startup:
+
+```
+Free memory on device (111.38/121.69 GiB) on startup.
+Desired GPU memory utilization is (0.9, 109.52 GiB).
+Actual usage is 68.68 GiB for consumed memory (weights + non-torch), 1.42 GiB for peak activation
+Replace gpu_memory_utilization config with --kv-cache-memory=44161560064 (41.13 GiB) to fully utilize gpu memory
+```
+
+That names the exact byte figure for the largest KV pool the box will give you.
+
 ## Thermals and memory pressure on this chassis
 
 Measured while benchmarking, because both affect what the numbers mean.
