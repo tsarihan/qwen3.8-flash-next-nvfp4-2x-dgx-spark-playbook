@@ -539,20 +539,25 @@ exercises the proxy hop and real long-context tool use, not just a benchmark har
 | qwen3.8-flash-next FP8 (RadixArk) | 262K | off | 36/40 (90.0%) |
 | qwen3.8-flash-next NVFP4 (RadixArk) | 262K | off | 36/40 (90.0%) |
 | **qwen3.8-flash-next NVFP4 (NVIDIA)** | **1M YaRN** | **k=1** | **38/40 (95.0%)** |
+| qwen3.8-flash-next NVFP4 (NVIDIA), control | 262K | k=1 | 36/40 (90.0%) |
 
-All 40 trajectories ended `Submitted` with a non-empty patch; median patch 10,977 bytes,
-range 2,197-34,967. The two failures are a strict subset of the earlier run's four: the same
-two `flipt-io/flipt` instances fail, two that the RadixArk build failed now pass, and nothing
-that passed before regressed.
+All 40 trajectories on the recommended build ended `Submitted` with a non-empty patch;
+median patch 10,977 bytes, range 2,197-34,967.
 
-**Read that as "no measurable quality cost", not as "+5 points."** Two instances out of 40 is
-inside run-to-run noise for a stochastic agent, and three variables moved at once between
-those rows: the checkpoint, the window, and MTP. What the run does establish is the thing
-worth establishing before you serve this config for real work: stretching to a 1M window with
-YaRN did not degrade agentic coding, and nothing in the proxy hop truncates or mangles long
-context on the way through.
+**The control run isolates the YaRN window.** The last row holds the checkpoint and MTP fixed
+and moves only the window back to native 262K. So the difference between it and the
+recommended build is the YaRN effect alone, with nothing else changing:
 
-Raw per-instance results are in `results/swe-eval-qwen38fn-nvfp4-nvidia-1m-mtp1.json`.
+- 1M YaRN 38/40 against native 262K 36/40, and the 1M failures are a **strict subset** of the
+  262K failures. The 1M window resolved two instances that native missed (a `flipt` and a
+  `teleport`) and regressed none.
+- Two instances out of 40 is inside run-to-run noise for a stochastic agent, so read this as
+  **no measurable quality cost from stretching to 1M with YaRN**, not as a +2 improvement. The
+  useful conclusion is the one you want before serving this for real work: the 1M window does
+  not degrade agentic coding, and nothing in the proxy hop truncates or mangles long context.
+
+Raw per-instance results: `results/swe-eval-qwen38fn-nvfp4-nvidia-1m-mtp1.json` (1M) and
+`results/swe-eval-qwen38fn-nvfp4-nvidia-262k-mtp1-control.json` (262K control).
 
 ## Thermals and memory pressure on this chassis
 

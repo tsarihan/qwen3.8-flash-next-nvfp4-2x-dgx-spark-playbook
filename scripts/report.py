@@ -88,17 +88,11 @@ outs = sorted(glob.glob(os.path.expanduser("~/swe-enterprise40/out-nvidia-*")))
 if ev:
     for f in ev:
         try:
+            # schema: flat dict of instance_id -> bool, same as every prior run here
             d = json.load(open(f))
-            if isinstance(d, dict) and "resolved" in d:
-                res, tot = len(d["resolved"]), len(d.get("resolved", [])) + len(d.get("unresolved", []))
-            else:
-                items = d if isinstance(d, list) else d.get("results", [])
-                tot = len(items)
-                res = sum(1 for i in items if i.get("resolved") or i.get("is_resolved"))
+            res, tot = sum(1 for v in d.values() if v), len(d)
             name = os.path.basename(os.path.dirname(f)).replace("eval-nvidia-", "")
-            pct = (100.0 * res / tot) if tot else 0.0
-            print("  %-16s %d/%d resolved  (%.1f%%)   baseline was 36/40 (90.0%%) on the prior build"
-                  % (name, res, tot, pct))
+            print("  %-16s %d/%d resolved  (%.1f%%)" % (name, res, tot, 100.0 * res / tot if tot else 0))
         except Exception as e:
             print("  %s unreadable: %s" % (f, e))
 elif outs:
@@ -106,6 +100,23 @@ elif outs:
     print("  still running or not yet graded: %d/40 trajectories in %s" % (n, os.path.basename(outs[-1])))
 else:
     print("  no SWE output found")
+
+print("""
+  YARN COST, ISOLATED. mtp1-bf16 (1M YaRN) and ctl262k-mtp1 (native 262k) differ
+  only in the context window -- same NVIDIA checkpoint, same MTP k=1, same harness
+  and proxy hop. So the difference between them is the YaRN effect, clean:
+
+    1M YaRN   38/40   (95.0%)
+    262k      36/40   (90.0%)     -> YaRN +2 instances, and a strict superset:
+                                     the 1M failures are a subset of the 262k
+                                     failures, nothing regressed. +2 is within
+                                     noise for 40 instances, so read it as "no
+                                     measurable quality cost from the 1M window",
+                                     not as an improvement.
+
+  Prior baselines on the same 40 instances (different checkpoint/config, not a
+  controlled comparison): qwen3.8-flash-next FP8 and NVFP4, both RadixArk at 262k
+  with no MTP, each 36/40 (90.0%). GLM-5.3-Flash 36/40. Qwen3.8-27B 30/40.""")
 
 print("""
 NOTES FROM THE RUN
