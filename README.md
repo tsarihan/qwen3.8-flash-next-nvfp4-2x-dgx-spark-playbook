@@ -450,6 +450,76 @@ Worth noting before treating this as a loss: on this hardware the NVIDIA build *
 MTP reached 218.11 tok/s aggregate at c=16, against the RadixArk build **with** MTP=3 at
 212.09. At higher concurrency batching dominates and speculation contributes little.
 
+## Config matrix: what actually helps
+
+Every config below ran at `--gpu-memory-utilization 0.85` on the NVIDIA checkpoint with the
+1M YaRN window, and every one returned 5/5 needles at 4K and 131K. Client load was driven
+from a separate host so the Sparks only served.
+
+| config | KV tokens | c1 agg | c4 agg | c16 agg | c1 per-stream |
+|---|---|---|---|---|---|
+| **mtp1-bf16** | 2,520,930 | **31.44** | 87.92 | 215.67 | 31.79 |
+| mtp3-bf16 | 2,459,752 | 31.07 | 82.75 | 202.65 | 31.45 |
+| native262k (no YaRN) | 2,403,230 | 30.72 | **94.08** | **233.73** | **33.22** |
+| streams32 | 2,488,372 | 28.0 | 90.57 | 214.94 | 28.37 |
+| streams64 | 2,424,806 | 27.66 | 91.33 | 225.88 | 29.76 |
+| mtp-off-bf16 | **2,915,806** | 21.88 | 72.93 | 215.01 | 22.02 |
+
+**MTP is worth having, at k=1.** `num_speculative_tokens=1` beats 3 on every axis, which is
+what NVIDIA's model card specifies. It costs about 395K KV tokens and ~4% prefill, and
+returns +44% single-stream aggregate and +56% decode at 131K context (35.25 vs 22.60 tok/s).
+k=3 is worse than *no MTP at all* at c=16 (202.65 vs 215.01): deeper speculation wastes
+compute once batching already saturates the machine.
+
+**max_num_seqs 16 is right for single-stream work.** Each doubling costs KV (2,520,930 ->
+2,488,372 -> 2,424,806) and hurts single-stream: seqs=64 has 6x worse TTFT at c=1 (1.339 s
+vs 0.212 s) and 12% lower single-stream throughput. Raise it only to serve a fleet.
+
+**YaRN to 1M costs about 8% throughput** and essentially no KV. `native262k` reaches 233.73
+at c=16 against 215.67 for the same config at 1M. Note the 1M config actually holds *more*
+KV than native (2,520,930 vs 2,403,230), because vLLM picks a different attention block size
+per `max_model_len` and the 1M layout packs slightly better.
+
+**Full ladder on the winning config** (mtp1, seqs raised to 64 so the ladder can reach c=64):
+
+```
+conc   agg tok/s   per-stream   ttft s
+   1       29.16        30.90    1.021
+   2       55.57        29.17    0.681
+   4       93.53        25.37    1.152
+   8      154.82        20.46    0.974
+  16      243.02        16.44    1.887
+  32      266.37        14.28    1.549
+  64      299.69        13.41    1.076
+```
+
+Peak 299.69 tok/s aggregate at c=64. The knee is c=16; past it you buy 10% then 12% more
+aggregate for steadily worse per-stream latency.
+
+### fp8 KV is not available on this hardware
+
+`--kv-cache-dtype fp8_e4m3` fails, and not for the reason the QSA gate suggests. Widening
+QSA's four bf16-only checks (`patches/patch_qsa_fp8_kv.py`, `QSA_FP8=1`) lets startup get
+one layer deeper, and then:
+
+```
+File "vllm/v1/attention/backends/flash_attn.py", line 927, in __init__
+NotImplementedError: FlashAttention does not support fp8_e4m3 kv-cache on this device.
+```
+
+So bf16 KV is an attention-backend limitation on sm_121, not a QSA quirk. No configuration
+reaches fp8 KV here; it needs kernel work. Upstream PRs 55557 and 54846 are still in review.
+
+### Recommended configuration
+
+```
+MAX_NUM_SEQS=16 YARN=1 YARN_FACTOR=4.0 MAX_MODEL_LEN=1000000 \
+GPU_UTIL=0.85 KV_DTYPE=bfloat16 SPEC=mtp MTP_K=1 MTP_FIX=1
+```
+
+1M window, 2,520,930 tokens of KV, 31.44 tok/s single stream, 5/5 needle recall verified to
+912,065 tokens, vision working. Raise `MAX_NUM_SEQS` to 64 only if serving concurrent agents.
+
 ## Thermals and memory pressure on this chassis
 
 Measured while benchmarking, because both affect what the numbers mean.
