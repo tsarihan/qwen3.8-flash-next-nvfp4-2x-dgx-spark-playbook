@@ -559,6 +559,29 @@ recommended build is the YaRN effect alone, with nothing else changing:
 Raw per-instance results: `results/swe-eval-qwen38fn-nvfp4-nvidia-1m-mtp1.json` (1M) and
 `results/swe-eval-qwen38fn-nvfp4-nvidia-262k-mtp1-control.json` (262K control).
 
+### Same 40 instances, other models on this rig
+
+| model | config | resolved |
+|---|---|---|
+| **Qwen3.8-Flash-Next NVFP4 (NVIDIA)** | 1M YaRN, MTP-1 | **38/40 (95.0%)** |
+| Qwen3.8-Flash-Next NVFP4 (NVIDIA) | 262K control, MTP-1 | 36/40 (90.0%) |
+| Qwen3.8-Flash-Next FP8 | 262K | 36/40 (90.0%) |
+| GLM-5.3-Flash NVFP4 (RedHat) | 262K, MTP-4, fp8 KV | 36/40 (90.0%) |
+| DeepSeek-V4-Flash-0731 MXFP4 | 1M, reasoning_effort max | 33/40 (82.5%) |
+
+Same harness, same prompts, same litellm hop for all of them. Qwen leads, but the spread
+across the top four is four instances on a 40-instance subset, which is inside the range
+where run-to-run variation matters — treat it as "these are the same class" rather than a
+ranking.
+
+Two cautions carried from those runs. DeepSeek's figure is only valid with
+`--default-chat-template-kwargs '{"thinking":true,"reasoning_effort":"max"}'`; without it
+vLLM silently disables its reasoning and the same setup scores 22/40, which would have
+looked like a model gap and was not. And GLM's figure depends on z.ai's sampling being set
+server-side. Every one of these models has a vendor recipe that moves the number by more
+than the gaps in this table, so a cross-model comparison is only meaningful once each model
+is served the way its publisher specifies.
+
 ## Thermals and memory pressure on this chassis
 
 Measured while benchmarking, because both affect what the numbers mean.
